@@ -1,0 +1,104 @@
+<?php
+/*
+ * $Id$
+ * EDocIAS (Electronic Document Index And Search).
+ *
+ * Configuration settings.
+ */
+
+// Location of a temporary directory that will be used when processing files
+$tempDir = "/tmp";
+
+// Array of directories to scan
+// More than one can be specified.
+// Example: $dirs = array ( "/Users/cknudsen/Documents" );
+$dirs = array ( "/CHANGEME/Documents" );
+
+// Array of folder names to skip
+// Any folder/directory with one of the following names will be
+// comppletely ignored.  This is typically used to ignore files that
+// have no text info to extract.
+$skipFolders = array (
+  'My Music',
+  'My Pictures',
+  'GnuCash',
+  'Visual Studio 2008',
+);
+
+// Settings
+$db_host = 'localhost';
+$db_login = 'CHANGEME';
+$db_password = 'CHANGEME';
+$db_database = 'CHANGEME';
+// The db type can be any of the following:
+//   mysql, mysqli, ibase, ibm_db2, odbc, oracle, postgresql, sqlite, sqlite3
+// Some of these database types will require the proper associated PHP
+// module.
+$db_type = 'mysql';
+$db_persistent = '0';
+// Should db errors be shown to the user?  (Good for development, terrible
+// idea for production.)
+$phpdbiVerbose = false;
+
+// Location of various tools for converting binary files to plain text
+// %FILE% will be replaced with the full path to the binary file.
+// Note that icons will be based on the 'type' and should be in the
+// "icons" subdirectory.  For example, the "image/jpeg" mime type will
+// use "icons/image-icon.png" icon.
+//
+// Each entry in the array will have the following fields:
+//   type: Specifies the general type of the file, which can then be used
+//         to show a suitable icon in the search results
+//   mime: The MIME type to include in the HTTP header if the user clicks
+//         on the document in the search results.  This tells the browser
+//         how to handle the file (what app to view the doc with).
+//   regex: The regular expression to search foe in the file's filename
+//          extension.  More than one can be used with the proper syntax,
+//          as in '(jpeg|jpg)'.  Note that this is case insensitive.
+//   command: The command to use to extract plain text from the document.
+//            The %FILE% token will be replaced with the fullpath filename.
+//            The result should create a file named "textout.txt" in the
+//            current directory.
+
+// These are some examples.  Most require the installation of 3rd party
+// software.  Please see the README.txt file for where to get some of
+// these tools.
+$fileSpecs = array (
+  array (
+    "type" => 'text',
+    "mime" => 'text/plain',
+    "regex" => 'txt',
+    "command" => 'cp "%FILE%" textout.txt' ),
+  array (
+    "type" => 'image',
+    "mime" => 'image/jpeg',
+    "regex" => '(jpg|jpeg)',
+    "command" => '/usr/local/bin/tesseract "%FILE%" textout' ),
+  array (
+    "type" => 'image',
+    "mime" => 'image/png',
+    "regex" => 'png',
+    "command" => '/usr/local/bin/tesseract "%FILE%" textout' ),
+  array (
+    "type" => 'image',
+    "mime" => 'image/gif',
+    "regex" => 'gif',
+    "command" => '/usr/local/bin/tesseract "%FILE%" textout' ),
+  array (
+    "type" => 'pdf',
+    "mime" => 'application/pdf',
+    "regex" => 'pdf',
+    "command" => '/opt/local/bin/xpdf-pdftotext "%FILE%" textout.txt' ),
+  array (
+    "type" => 'word',
+    "mime" => 'application/ms-word',
+    "regex" => 'doc',
+    "command" => '/usr/local/bin/antiword "%FILE%" > textout.txt' ),
+  array (
+    "type" => 'excel',
+    "mime" => 'application/ms-excel',
+    "regex" => 'xls',
+    "command" => '/usr/bin/perl /CHANGEME/xls2txt.pl "%FILE%" textout.txt' ),
+);
+
+?>
