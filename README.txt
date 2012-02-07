@@ -49,6 +49,15 @@ Installation:
      php scan.php
    It is recommended you setup a cron job to run this once a day to
    automatically pick up new files.
+5) Optionally customize the appearance to match the rest of your site.
+   The UI was intentionally left bare to avoid conflicts with your website.
+   The main page (index.php) will look for the following files.  If found,
+   they will be included.
+   - style.css: a custom style sheet
+   - header.html or header.php: custom PHP or HTML that will be included
+     at the top of the page before the EDocIAS content.
+   - trailer.html or trailer.php: custom PHP or HTML that will be included
+     after the EDocIAS content.
 
 ----------------------------------------------------------------------------
 Misc. Tips:

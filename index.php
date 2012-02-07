@@ -18,6 +18,13 @@ include_once "functions.php";
 <html>
 <head>
 <title>Document Search</title>
+<?php
+// Allow customization of the appearance with a custom CSS file.
+// We will include a style.css if we find one.
+if ( file_exists ( 'style.css' ) ) {
+  include_once "style.css";
+}
+?>
 <style type="text/css">
 dt a {
   font-size: 80%;
@@ -31,6 +38,14 @@ div.textmatch {
 <body>
 
 <?php
+
+// Allow customization of the appearance with a custom header file.
+// We will include either 'header.html' or 'header.php';
+if ( file_exists ( 'header.php' ) ) {
+  include_once ( 'header.php' );
+} else if ( file_exists ( 'header.html' ) ) {
+  echo file_get_contents ( 'header.html' );
+}
 
 $q = getGetValue ( 'q' );
 
@@ -178,6 +193,13 @@ function show_matching_text ( $words, $ocr )
 
 dbi_close ( $c );
 
+// Allow customization of the appearance with a custom tailer file.
+// We will include either 'tailer.html' or 'tailer.php';
+if ( file_exists ( 'tailer.php' ) ) {
+  include_once ( 'tailer.php' );
+} else if ( file_exists ( 'tailer.html' ) ) {
+  echo file_get_contents ( 'tailer.html' );
+}
 ?>
 
 </body>
