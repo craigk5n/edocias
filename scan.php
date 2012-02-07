@@ -1,6 +1,5 @@
 <?php
 /*
- * $Id$
  * EDocIAS (Electronic Document Index And Search).
  *
  * Recursively scan the specified directories for image and PDF files.

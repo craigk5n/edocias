@@ -1,6 +1,5 @@
 <?php
 /*
- * $Id$
  * EDocIAS (Electronic Document Index And Search).
  *
  * Downloads a specific file by its docid.

@@ -1,7 +1,5 @@
 <?php
 /*
- * $Id$
- *
  * Main page for EDocIAS (Electronic Document Index And Search).
  * Presents the search form and displays search results in the case of
  * an HTTP POST request.
