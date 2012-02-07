@@ -16,6 +16,12 @@
 
 error_reporting ( E_ALL ); // report all errors
 
+// Require command line usage only (for added security)
+if ( PHP_SAPI != 'cli' ) {
+  echo "Command line usage only!\n";
+  exit;
+}
+
 include_once "config.php";
 include_once "dbi4php.php";
 

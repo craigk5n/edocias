@@ -39,7 +39,8 @@ Installation:
    include.  You must also configure how to handle all the various file types.
 2) Install and configure the various document conversion tools needed to
    extract plain text from the various file types.  See the list of possible
-   tools to use for this below.
+   tools to use for this below.  There are some tools in the included
+   tools.zip file.
 3) Create the MySQL database using the SQL found in tables-mysql.sql.
    Other database types should work (Oracle, PostgreSQL, etc.) but have not
    been tested (and you may have to change the 'CREATE TABLE' syntax).
@@ -81,10 +82,15 @@ doc (MS Word):
   URL: http://www.winfield.demon.nl/
 
 xls (MS Excel):
-  Tool: xls2txt.pl - perl script bundled with this app
+  Tool: xls2txt.pl (included in tools.zip)
   URL: n/a
   Notes: This perl script requires a few modules available from cpan.org.
     You'll get an error indicating the missing modules if you don't have them.
+
+html:
+  Tool: html2txt.php (included in tools.zip)
+  Notes: Small custom script that uses open source phphtmlparser tool
+  URL: http://php-html.sourceforge.net/html2text.php
 
 
 The tools below look like a good fit also, but I have not tried them.
