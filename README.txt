@@ -3,7 +3,7 @@ Electronic Document Index And Search
 
 Author: craig _at_ k5n.us
 Version: 1.0
-URL: http://www.k5n.us/
+URL: http://www.k5n.us/edocias.php
 
 ----------------------------------------------------------------------------
 Purpose:
