@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# $Id$
 # EDocIAS
 #
 # Convert a ms-office xls file into a single text file (tab-delimited)
