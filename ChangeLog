@@ -1,4 +1,6 @@
 Version 1.1 (13 Feb 2012)
+- Added pagination support.  Configure $maxMatchesBeforePagination and
+  $matchesPerPage in config.php.
 - Updated scan.php to rescan files that were modified since the last scan
   (based on file modification time).
 - Altered table structure to include new "title" column which will be

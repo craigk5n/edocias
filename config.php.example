@@ -6,6 +6,13 @@
  * Configuration settings.
  */
 
+// How many search matches to display before switching to pagination
+$maxMatchesBeforePagination = 50;
+
+// If the number of matches exceeds the above setting, then how many
+// should we show per page?
+$matchesPerPage = 15;
+
 // Location of a temporary directory that will be used when processing files
 $tempDir = "/tmp";
 

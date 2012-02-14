@@ -33,6 +33,17 @@ dt a {
 div.textmatch {
   font-size: 70%;
 }
+div.pagination {
+  font-size: 80%;
+}
+div.pagination a, b{
+}
+div.pagination a.page, b.page {
+  border: 1px solid #c0c0c0;
+  background-color: #e0e0e0;
+  padding-left: 3px;
+  padding-right: 3px;
+}
 </style>
 </head>
 <body>
@@ -103,8 +114,8 @@ if ( ! empty ( $q ) ) {
   $sql .= ' ORDER by date DESC';
   //echo "SQL: $sql<br>Params:<br/>"; print_r ( $sql_params ); echo "<br/>";
   $res = dbi_execute ( $sql, $sql_params );
-  $out = "<dl>\n";
   $cnt = 0;
+  $outArray = array ();
   while ( $row = dbi_fetch_row ( $res ) ) {
     $cnt++;
     $docid = $row[0];
@@ -118,20 +129,58 @@ if ( ! empty ( $q ) ) {
       '&nbsp;&nbsp;' : '<img src="' . $icon . '" /> ';
     // If the filepath starts with 'http://', then this is a remote URL
     // rather than a local file.
+    $thisMatch = '';
     if ( preg_match ( '/http:\/\//', $filepath ) ) {
-      $out .= '<dt>' . $icon_url . '<a href="' . $filepath . '">' .
+      $thisMatch .= '<dt>' . $icon_url . '<a href="' . $filepath . '">' .
         ( empty ( $title ) ? htmlentities ( $filepath ) :
         htmlentities ( $title ) ) .
         '</a></dt><dd>';
     } else {
-      $out .= '<dt>' . $icon_url . '<a href="docview.php?id=' . $docid . '">' .
+      $thisMatch .= '<dt>' . $icon_url . '<a href="docview.php?id=' . $docid . '">' .
         htmlentities ( trim_filename ( $filepath ) ) .
         '</a></dt><dd>';
    }
-    $out .= show_matching_text ( $words, $ocr );
-    $out .= '</dd>' . "\n";
+    $thisMatch .= show_matching_text ( $words, $ocr );
+    $thisMatch .= '</dd>' . "\n";
+    $outArray[] = $thisMatch;
   }
-  $out .= "</dl>\n";
+  if ( count ( $outArray ) > $maxMatchesBeforePagination ) {
+    // Use pagination
+    $p = getIntValue ( 'p' ); // default is first page (1)
+    if ( empty ( $p ) )
+      $p = 1;
+    $start = ( $p - 1 ) * $matchesPerPage;
+    $last = $start + $matchesPerPage - 1;
+    if ( $last >= count ( $outArray ) - 1 )
+      $last = count ( $outArray ) - 1;
+    $numPages = ceil ( count ( $outArray ) / $matchesPerPage );
+    $nav = "<div class=\"pagination\"><p>Page ";
+    for ( $i = 1; $i <= $numPages; $i++ ) {
+      $nav .= " ";
+      if ( $i == $p ) {
+        $nav .= "<b class=\"page\">$i</b>";
+      } else {
+        $nav .= '<a class="page" href="index.php?q=' . htmlentities ( $q ) .
+          '&amp;p=' . $i . '">' . $i . '</a>';
+      }
+    }
+    $nav .= "</p>\n</div>";
+    $out = $nav;
+    $out .= "<p>Showing results " . ( $start + 1 ) . ' to ' .
+      ( $last + 1 ) . "</p>\n";
+    $out .= "<dl>\n";
+    for ( $i = $start; $i < count ( $outArray ) && $i <= $last; $i++ ) {
+      $out .= $outArray[$i];
+    }
+    $out .= "</dl>\n" . $nav;
+  } else {
+    // No pagination required
+    $out = "<dl>\n";
+    for ( $i = 0; $i < count ( $outArray ); $i++ ) {
+      $out .= $outArray[$i];
+    }
+    $out .= "</dl>\n";
+  }
   echo "$cnt matching documents found<br/>";
   echo $out;
   dbi_free_result ( $res );
