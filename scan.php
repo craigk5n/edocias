@@ -2,16 +2,16 @@
 /*
  * EDocIAS (Electronic Document Index And Search).
  *
- * Recursively scan the specified directories for image and PDF files.
+ * Recursively scan the specified directories for files.
  * This tools is meant to be used from the command line using the CLI
  * verison of php:
  *   php scan.php
  *
  * See README.txt for a list of tools to convert various file formats
  * (pdf, doc, xls, jpeg, png, etc.) into simple text for use in the search
- * index.
- *
- * TODO: check modification time of files and reprocess if they are updated.
+ * index.  You can also check the wiki which may have info on various
+ * tools for extracting text from different file formats:
+ *   https://sourceforge.net/p/edocias/wiki/
  */
 
 error_reporting ( E_ALL ); // report all errors
@@ -39,57 +39,59 @@ if ( ! $c ) {
 $total = $ignored = $prior = $processed = $unknown = 0;
 
 foreach ( $dirs as $dir ) {
-  $ite=new RecursiveDirectoryIterator ( $dir );
-  foreach (new RecursiveIteratorIterator($ite) as $filename=>$cur) {
-    chdir ( $tempDir );
-    $ignore = false;
-    $total++;
-    foreach ( $skipFolders as $skip ) {
-      if ( strpos ( $filename, $skip ) > 0 ) {
-        $ignore = true;
-        //echo "Ignore: found '$skip' in '$filename'\n";
-      }
-    }
-    if ( $ignore ) {
-      // do nothing :-)
-      $ignored++;
-    } else if ( doc_exists ( $filename ) ) {
-      // Ignore
-      // TODO: check timestamp in case doc was updated
-      $prior++;
-    } else {
-      $didThis = false;
-      foreach ( $fileSpecs as $fileSpec ) {
-        $type = $fileSpec['type'];
-        $command = $fileSpec['command'];
-        $re = $fileSpec['regex'];
-        $mime = $fileSpec['mime'];
-        $mtime = filemtime ( $filename );
-        if ( preg_match ( "/\.$re$/i", $cur ) ) {
-          $processed++;
-          $didThis = true;
-          echo "File: $filename\n";
-          $cmd = str_replace ( '%FILE%', $cur, $command );
-          echo "COMMAND: $cmd\n";
-          exec ( $cmd );
-          $out = "$tempDir/$outFile";
-	  if ( file_exists ( "$out" ) ) {
-            //$text = file_get_contents ( $out );
-            $fh = fopen ( $out, 'r' );
-            $text = fread ( $fh, filesize ( $out ) );
-            fclose ( $fh );
-            //echo "\n\nTEXT:\n$text\n";
-            store_file ( $filename, $mime, $mtime, $text );
-            echo "Processed: $filename\n";
-            echo "  Text: " . str_replace ( "\n", ' ', substr ( $text, 0, 60 ) ) . "\n";
-            unlink ( "$out" );
-          } else {
-            echo "ERROR: no output created for input file $filename\n";
-          }
-          //sleep ( 3 );
+  if ( empty ( $skipDirs[$dir] ) ) {
+    $ite=new RecursiveDirectoryIterator ( $dir );
+    foreach (new RecursiveIteratorIterator($ite) as $filename=>$cur) {
+      chdir ( $tempDir );
+      $ignore = false;
+      $total++;
+      foreach ( $skipFolders as $skip ) {
+        if ( strpos ( $filename, $skip ) > 0 ) {
+          $ignore = true;
+          //echo "Ignore: found '$skip' in '$filename'\n";
         }
       }
-      if ( ! $didThis ) $unknown++;
+      if ( $ignore ) {
+        // do nothing :-)
+        $ignored++;
+      } else if ( doc_is_up_to_date ( $filename ) ) {
+        // Ignore
+        // TODO: check timestamp in case doc was updated
+        $prior++;
+      } else {
+        $didThis = false;
+        foreach ( $fileSpecs as $fileSpec ) {
+          $type = $fileSpec['type'];
+          $command = $fileSpec['command'];
+          $re = $fileSpec['regex'];
+          $mime = $fileSpec['mime'];
+          $mtime = filemtime ( $filename );
+          if ( preg_match ( "/\.$re$/i", $cur ) ) {
+            $processed++;
+            $didThis = true;
+            echo "File: $filename\n";
+            $cmd = str_replace ( '%FILE%', $cur, $command );
+            echo "COMMAND: $cmd\n";
+            exec ( $cmd );
+            $out = "$tempDir/$outFile";
+	    if ( file_exists ( "$out" ) ) {
+              //$text = file_get_contents ( $out );
+              $fh = fopen ( $out, 'r' );
+              $text = fread ( $fh, filesize ( $out ) );
+              fclose ( $fh );
+              //echo "\n\nTEXT:\n$text\n";
+              store_file ( $filename, $mime, $mtime, $text );
+              echo "Processed: $filename\n";
+              echo "  Text: " . str_replace ( "\n", ' ', substr ( $text, 0, 60 ) ) . "\n";
+              unlink ( "$out" );
+            } else {
+              echo "ERROR: no output created for input file $filename\n";
+            }
+            //sleep ( 3 );
+          }
+        }
+        if ( ! $didThis ) $unknown++;
+      }
     }
   }
 }
@@ -109,16 +111,29 @@ exit;
   * Does the document specified already exist in our database (and therefore
   * has already been processed)?
   */
-function doc_exists ( $filename )
+function doc_is_up_to_date ( $filename )
 {
   $ret = false;
+  $mtime = filemtime ( $filename );
 
-  $res = dbi_execute ( 'SELECT COUNT(*) FROM edm_doc WHERE filepath = ?',
+  $res = dbi_execute ( 'SELECT date FROM edm_doc WHERE filepath = ?',
     array ( $filename ) );
   if ( $res ) {
     $row = dbi_fetch_row ( $res );
-    $ret = ( $row[0] > 0 );
-    dbi_free_result ( $res );
+    if ( is_array ( $row ) ) {
+      $prevMtime = $row[0];
+      dbi_free_result ( $res );
+      if ( $mtime > $prevMtime ) {
+        // file has been modified since last run
+        // delete old entry
+        dbi_execute ( 'DELETE FROM edm_doc WHERE filepath = ?',
+          array ( $filename ) );
+        //echo "File updated since last run: $filename\n";
+      } else {
+        // doc is in db and modification time matches
+        $ret = true;
+      }
+    }
   }
   return $ret;
 }

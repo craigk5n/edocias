@@ -1,2 +1,11 @@
+Version 1.1 (13 Feb 2012)
+- Updated scan.php to rescan files that were modified since the last scan
+  (based on file modification time).
+- Altered table structure to include new "title" column which will be
+  used in the search results when it is not null.
+  Version 1.0 users can upgrade their database with the following SQL:
+    alter table edm_doc add column doctitle VARCHAR(256) NULL;
+- Added tools/webcalendar.php (bundled in tools.zip) as a way of also
+  indexing all events in a local WebCalendar installation.
 Version 1.0 (07 Feb 2012)
 - Initial version

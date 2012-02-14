@@ -91,7 +91,7 @@ if ( ! empty ( $q ) ) {
 
   $order = 'DESC';
   $word_cnt = count ( $words );
-  $sql = 'SELECT docid, filepath, date, mime, ocr FROM edm_doc WHERE ';
+  $sql = 'SELECT docid, doctitle, filepath, date, mime, ocr FROM edm_doc WHERE ';
   $sql_params = array ();
   for ( $i = 0; $i < $word_cnt; $i++ ) {
     if ( $i > 0 )
@@ -108,16 +108,26 @@ if ( ! empty ( $q ) ) {
   while ( $row = dbi_fetch_row ( $res ) ) {
     $cnt++;
     $docid = $row[0];
-    $filepath = $row[1];
-    $date = $row[2];
-    $mime = $row[3];
-    $ocr = $row[4];
+    $title = $row[1];
+    $filepath = $row[2];
+    $date = $row[3];
+    $mime = $row[4];
+    $ocr = $row[5];
     $icon = mime_to_icon ( $mime );
     $icon_url = empty ( $icon ) ?
       '&nbsp;&nbsp;' : '<img src="' . $icon . '" /> ';
-    $out .= '<dt>' . $icon_url . '<a href="docview.php?id=' . $docid . '">' .
-       htmlentities ( trim_filename ( $filepath ) ) .
-       '</a></dt><dd>';
+    // If the filepath starts with 'http://', then this is a remote URL
+    // rather than a local file.
+    if ( preg_match ( '/http:\/\//', $filepath ) ) {
+      $out .= '<dt>' . $icon_url . '<a href="' . $filepath . '">' .
+        ( empty ( $title ) ? htmlentities ( $filepath ) :
+        htmlentities ( $title ) ) .
+        '</a></dt><dd>';
+    } else {
+      $out .= '<dt>' . $icon_url . '<a href="docview.php?id=' . $docid . '">' .
+        htmlentities ( trim_filename ( $filepath ) ) .
+        '</a></dt><dd>';
+   }
     $out .= show_matching_text ( $words, $ocr );
     $out .= '</dd>' . "\n";
   }
@@ -140,6 +150,10 @@ function mime_to_icon ( $mime )
       return false; // no such icon
     }
   }
+
+  $icon = 'icons/' . $mime . '-icon.png';
+  if ( file_exists ( $icon ) )
+    return $icon;
 
   return false; // mime type not found (oops)
 }
