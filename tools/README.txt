@@ -11,7 +11,7 @@ Tool: xls2txt.pl
 Description:
   Perl-based tool for extract plain text from Miscrosoft's Excel (*.xls)
   format.  Requires Perl modules from CPAN to use.
-  License: Free to use in any way (no license)
+License: Free to use in any way (no license)
 URL: none (created for EDocIAS)
 
 Tool: phphtmlparser
@@ -19,4 +19,11 @@ Description:
   PHP-based tool for extracting plain text from HTML files.
 License: Apache Software License, Version 1.1
 URL: http://php-html.sourceforge.net/html2text.php
+
+Tool: webcalendar.php
+Description:
+  PHP-based tool for adding all events from a local WebCalendar installation
+  into the doc index.
+License: Free to use in any way (no license)
+URL: none (created for EDocIAS)
 
