@@ -17,7 +17,7 @@ include_once "functions.php";
 include_once "translate.php";
 
 // Allow 'lang' to be reset with URL parameter.
-// Example: index.phpq=searchterm&lang=de
+// Example: index.php?q=searchterm&lang=de
 $langParam = '';
 if ( ! empty ( $language ) ) {
   if ( empty ( $browser_languages[$language] ) ) {
