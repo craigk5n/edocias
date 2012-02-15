@@ -267,15 +267,6 @@ function display_time ( $time, $ignore_offset=0 ) {
     $hour += 24;
   while ( $hour > 23 )
     $hour -= 24;
-  //if ( $GLOBALS["TIME_FORMAT"] == "12" ) {
-  //  $ampm = ( $hour >= 12 ) ? translate("pm") : translate("am");
-  //  $hour %= 12;
-  //  if ( $hour == 0 )
-  //    $hour = 12;
-  //  $ret = sprintf ( "%d:%02d%s", $hour, $min, $ampm );
-  //} else {
-    $ret = sprintf ( "%d:%02d", $hour, $min );
-  //}
   return $ret;
 }
 
@@ -465,6 +456,12 @@ function date_to_str ( $indate, $format="", $show_weekday=true, $short_months=fa
     return "$weekday, $ret";
   else
     return $ret;
+}
+
+function die_miserable_death ( $error )
+{
+  echo "<h2>Error</h2>\n<p>" . $error . "</p>\n";
+  exit;
 }
 
 ?>

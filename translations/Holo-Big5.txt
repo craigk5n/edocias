@@ -1,0 +1,56 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Henry H. Tan-Tenn <share2002nov@lomaji.com>
+#
+# $Id: Holo-Big5.txt,v 1.23 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: 1月
+February: 2月
+March: 3月
+April: 4月
+May_: 5月
+June: 6月
+July: 7月
+August: 8月
+September: 9月
+October: 10月
+November: 11月
+December: 12月
+Jan: 1月
+Feb: 2月
+Mar: 3月
+Apr: 4月
+May: 5月
+Jun: 6月
+Jul: 7月
+Aug: 8月
+Sep: 9月
+Oct: 10月
+Nov: 11月
+Dec: 12月
+Sunday: 禮拜日
+Monday: 拜一
+Tuesday: 拜二
+Wednesday: 拜三
+Thursday: 拜四
+Friday: 拜五
+Saturday: 拜六
+Sun: 禮拜
+Mon: 拜一
+Tue: 拜二
+Wed: 拜三
+Thu: 拜四
+Fri: 拜五
+Sat: 拜六
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: 資料庫錯誤
+Search: 檢索
+matches found: 筆符合查詢

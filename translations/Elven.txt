@@ -1,0 +1,63 @@
+# Translations from:
+# English-Quernya, http://home.netcom.com/~heensle/lang/elvish/quenya/engquen.html
+# and
+# The Language of the Elven
+# http://www.grey-company.org/Circle/language/search/Wordsearch.cgi?Language=Elven
+#
+# Note:  This is a 'graphical fantasy language' and is much better with a
+# special font installed on your personal computer. You can find one at:
+#
+# Writing with Elvish Fonts, http://www.sci.fi/~alboin/tengwartutorial.htm
+#
+# Note:  Elven folk do not use abbreviations much.
+#
+# $Id: Elven.txt,v 1.5 2009/10/27 18:36:50 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Narvinye
+February: Nénime
+March: Súlime
+April: Víresse
+May_: Lótesse
+June: Nárie
+July: Cermie
+August: Urime
+September: Yavannie
+October: Narquelie
+November: Hísime
+December: Ringáre
+Jan: Narvinye
+Feb: Nénime
+Mar: Súlime
+Apr: Víresse
+May: Lótesse
+Jun: Nárie
+Jul: Cermie
+Aug: Urime
+Sep: Yavannie
+Oct: Narquelie
+Nov: Hísime
+Dec: Ringáre
+Sunday: Tárion
+Monday: Elenya
+Tuesday: Anarya
+Wednesday: Isilya
+Thursday: Alduya
+Friday: Menelya
+Saturday: Valanya
+Sun: Tárion
+Mon: Elenya
+Tue: Anarya
+Wed: Isilya
+Thu: Alduya
+Fri: Menelya
+Sat: Valany
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: translate.php
+#
+Elven: Eldalie

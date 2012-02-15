@@ -1,0 +1,91 @@
+# Translated by: Ronny as-salafi <ronny.assalafi@gmail.com>
+# Last update: 28 August 2007
+#
+# $Id: Bahasa_Indonesia.txt,v 1.9 2010/02/21 08:27:49 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Januari
+February: Februari
+March: Maret
+April: =
+May_: Mei
+June: Juni
+July: Juli
+August: Agustus
+September: =
+October: Oktober
+November: Nopember
+December: Desember
+Jan: =
+Feb: =
+Mar: =
+Apr: =
+May: Mei
+Jun: =
+Jul: =
+Aug: Ags
+Sep: =
+Oct: Okt
+Nov: Nop
+Dec: Des
+Sunday: Ahad
+Monday: Senin
+Tuesday: Selasa
+Wednesday: Rabu
+Thursday: Kamis
+Friday: Jum'at
+Saturday: Sabtu
+Sun: Ahd
+Mon: Sen
+Tue: Sel
+Wed: Rab
+Thu: Kam
+Fri: Jum
+Sat: Sab
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Terjadi kesalahan pada database
+Search: Pencarian
+matches found: yang cocok ditemukan
+
+########################################
+# Page: translate.php
+#
+English: Bahasa Inggris
+Basque: Bahasa Basque
+Bulgarian: Bahasa Bulgaria
+Catalan: Bahasa Catalonia
+Chinese (Simplified/GB2312): Cina (Disederhanakan/GB2312)
+Chinese (Traditional/Big5): Cina (Tradisional/Big5)
+Czech: Bahasa Ceko
+Danish: Bahasa Denmark
+Dutch: Bahasa Belanda
+Estonian: Bahasa Estonia
+Finnish: Bahasa Finlandia
+French: Bahasa Perancis
+Galician: Bahasa Galicia
+German: Bahasa Jerman
+Greek: Bahasa Yunani
+Holo (Taiwanese): Holo (Bahasa Taiwan)
+Hungarian: Bahasa Hungaria
+Icelandic: Bahasa Iceland
+Indonesian: Bahasa Indonesia
+Italian: Bahasa Italia
+Japanese: Bahasa Jepang
+Korean: Bahasa Korea
+Norwegian: Bahasa Norwegia
+Polish: Bahasa Polandia
+Portuguese: Bahasa Portugis
+Portuguese/Brazil: Bahasa Portugis/Brazil
+Romanian: Bahasa Romania
+Russian: Bahasa Rusia
+Spanish: Bahasa Spanyol
+Swedish: Bahasa Swedia
+Turkish: Bahasa Turki
+Welsh: Bahasa Wales

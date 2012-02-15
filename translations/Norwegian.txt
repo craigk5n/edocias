@@ -1,0 +1,123 @@
+# See translations/English-US.txt for instructions.
+#
+# Original translation: Pål Løberg/Magni Onsøien <initio@initio.no>
+#
+# Updated since 2002 by Hans Fredrik Nordhaug <hansfn@users.sourceforge.net>
+# Last update: 09-24-20085
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# $Id: Norwegian.txt,v 1.53 2010/02/21 08:27:52 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Januar
+February: Februar
+March: Mars
+April: =
+May_: Mai
+June: Juni
+July: Juli
+August: =
+September: =
+October: Oktober
+November: =
+December: Desember
+Jan: =
+Feb: =
+Mar: =
+Apr: =
+May: Mai
+Jun: =
+Jul: =
+Aug: =
+Sep: =
+Oct: Okt
+Nov: =
+Dec: Des
+Sunday: Søndag
+Monday: Mandag
+Tuesday: Tirsdag
+Wednesday: Onsdag
+Thursday: Torsdag
+Friday: Fredag
+Saturday: Lørdag
+Sun: Søn
+Mon: Man
+Tue: Tir
+Wed: Ons
+Thu: Tor
+Fri: Fre
+Sat: Lør
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Feil i databasen
+There are currently XXX documents.: Det er for tiden XXX dokumenter
+Search: Søk
+Page: Side
+Showing matches XXXSTARTXXX to XXXENDXXX: Viser kamper XXXSTARTXXX til XXXENDXXX
+matches found: treff funnet
+
+########################################
+# Page: translate.php
+#
+English: Engelsk
+English-US: Engelsk-US
+Afrikaans: =
+Albanian: Albansk
+Arabic: Arabisk
+Basque: Baskisk
+Bulgarian: Bulgarsk
+Catalan: Katalansk
+Chinese (Simplified/GB2312): Kinesisk med enkle tegn
+Chinese (Traditional/Big5): Kinesisk
+Croatian: Kroatisk
+Czech: Tsjekkisk
+Danish: Dansk
+Dutch: Nederlansk
+Elven: Alvisk
+Estonian: Estisk
+Finnish: Finsk
+French: Fransk
+Galician: Galisisk
+German: Tysk
+Greek: Gresk
+Hebrew: Hebraisk
+Holo (Taiwanese): Taiwansk
+Hungarian: Ungarsk
+Icelandic: Islandsk
+Indonesian: Indonesisk
+Italian: Italiensk
+Japanese: Japansk
+Korean: Koreansk
+Lithuanian: Litauisk
+Norwegian: Norsk
+Polish: Polsk
+Portuguese: Portugisisk
+Portuguese/Brazil: Portugisisk/Brasiliansk
+Romanian: Rumensk
+Russian: Russisk
+Serbian: Serbisk
+Slovak: Slovakisk
+Slovenian: Slovakisk
+Spanish: Spansk
+Swedish: Svensk
+Turkish: Tyrkisk
+Welsh: Walisisk
+Browser-defined: Nettleser-definert
+0: =
+1: =
+2: =
+3: =
+4: =
+5: =
+6: =
+7: =
+8: =
+9: =

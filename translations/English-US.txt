@@ -1,0 +1,150 @@
+# Use this as a starting point to translate into other languages.
+#
+# Note to translators:  If you want to copy these header comments to your
+# language file and translate them, too, that's OK with us.
+#
+# The format consists of an optional header:
+#
+# Translated by: your name and email
+# Last update: the date of translation
+#   (Including the leading "# " and any comments made by previous translators.
+#   The FIRST blank line ends these header comments.)
+#
+# Followed by as many as needed:
+#
+# English phrase: translation
+#   (One to a line. WITHOUT the leading "# ".
+#   The "English phrase: ", including the colon ":", is provided by the
+#   WebCalendar developers. Your part is the "translation".)
+#
+# The tools directory contains two perl scripts to help you:
+#   - check_translation.pl
+#       indicates if all text has been successfully translated.
+#   - update_translation.pl
+#       will parse the program files to find all translate ( 'phrase' ) and
+#       tooltip ( 'phrase' ). It will arrange the phrases according to the page
+#       (file) that contains the first occurance. Optionally, it can tag the
+#       phrases that are not yet translated by putting
+#       << MISSING >>
+#       on the line above the phrase. And, if the phrase is an abbreviation,
+#       it will include the full English text on the line below the phrase.
+#
+# Note: I'm attempting to cut down on the overall file size. If the "translation"
+#       word / phrase is identical in your language and English, just use an "=" sign.
+#
+# Note:  You will notice the entry for "May_" below. There is a reason for this.
+#        Translate "May_" to the full month name and "May" to the,
+#        usually three-letter, month abbreviation (like "Oct" for "October").
+#
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: January
+February: February
+March: March
+April: April
+May_: May
+June: June
+July: July
+August: August
+September: September
+October: October
+November: November
+December: December
+Jan: Jan
+Feb: Feb
+Mar: Mar
+Apr: Apr
+May: May
+Jun: Jun
+Jul: Jul
+Aug: Aug
+Sep: Sep
+Oct: Oct
+Nov: Nov
+Dec: Dec
+Sunday: Sunday
+Monday: Monday
+Tuesday: Tuesday
+Wednesday: Wednesday
+Thursday: Thursday
+Friday: Friday
+Saturday: Saturday
+Sun: Sun
+Mon: Mon
+Tue: Tue
+Wed: Wed
+Thu: Thu
+Fri: Fri
+Sat: Sat
+__month__ __dd__, __yyyy__: __month__ __dd__, __yyyy__
+
+########################################
+# Page: index.php
+#
+Database error: Database error
+There are currently XXX documents.: There are currently XXX documents.
+Search: Search
+Page: Page
+Showing matches XXXSTARTXXX to XXXENDXXX: Showing matches XXXSTARTXXX to XXXENDXXX
+matches found: matches found
+
+########################################
+# Page: translate.php
+#
+English: English
+English-US: English-US
+Afrikaans: Afrikaans
+Albanian: Albanian
+Arabic: Arabic
+Basque: Basque
+Bulgarian: Bulgarian
+Catalan: Catalan
+Chinese (Simplified/GB2312): Chinese (Simplified/GB2312)
+Chinese (Traditional/Big5): Chinese (Traditional/Big5)
+Croatian: Croatian
+Czech: Czech
+Danish: Danish
+Dutch: Dutch
+Elven: Elven
+Estonian: Estonian
+Finnish: Finnish
+French: French
+Galician: Galician
+German: German
+Greek: Greek
+Hebrew: Hebrew
+Holo (Taiwanese): Holo (Taiwanese)
+Hungarian: Hungarian
+Icelandic: Icelandic
+Indonesian: Indonesian
+Italian: Italian
+Japanese: Japanese
+Korean: Korean
+Lithuanian: Lithuanian
+Norwegian: Norwegian
+Polish: Polish
+Portuguese: Portuguese
+Portuguese/Brazil: Portuguese/Brazil
+Romanian: Romanian
+Russian: Russian
+Serbian: Serbian
+Slovak: Slovak
+Slovenian: Slovenian
+Spanish: Spanish
+Swedish: Swedish
+Turkish: Turkish
+Welsh: Welsh
+Browser-defined: Browser-defined
+0: 0
+1: 1
+2: 2
+3: 3
+4: 4
+5: 5
+6: 6
+7: 7
+8: 8
+9: 9

@@ -1,0 +1,60 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Liang-Kuan Liu <lianguan@pchome.com.tw>
+# Last update: 15 February 2001
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Chinese-Big5.txt,v 1.35 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: 一月
+February: 二月
+March: 三月
+April: 四月
+May_: 五月
+June: 六月
+July: 七月
+August: 八月
+September: 九月
+October: 十月
+November: 十一月
+December: 十二月
+Jan: 1月
+Feb: 2月
+Mar: 3月
+Apr: 4月
+May: 5月
+Jun: 6月
+Jul: 7月
+Aug: 8月
+Sep: 9月
+Oct: 10月
+Nov: 11月
+Dec: 12月
+Sunday: 星期日
+Monday: 星期一
+Tuesday: 星期二
+Wednesday: 星期三
+Thursday: 星期四
+Friday: 星期五
+Saturday: 星期六
+Sun: 週日
+Mon: 週一
+Tue: 週二
+Wed: 週三
+Thu: 週四
+Fri: 週五
+Sat: 週六
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Search: 搜尋
+matches found: 筆符合查詢

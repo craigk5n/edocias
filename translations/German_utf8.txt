@@ -1,0 +1,110 @@
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Januar
+February: Februar
+March: M&auml;rz
+April: =
+May_: Mai
+June: Juni
+July: Juli
+August: =
+September: =
+October: Oktober
+November: =
+December: Dezember
+Jan: =
+Feb: =
+Mar: M&auml;r
+Apr: =
+May: Mai
+Jun: =
+Jul: =
+Aug: =
+Sep: Sept
+Oct: Okt
+Nov: =
+Dec: Dez
+Sunday: Sonntag
+Monday: Montag
+Tuesday: Dienstag
+Wednesday: Mittwoch
+Thursday: Donnerstag
+Friday: Freitag
+Saturday: Samstag
+Sun: So
+Mon: Mo
+Tue: Di
+Wed: Mi
+Thu: Do
+Fri: Fr
+Sat: Sa
+__month__ __dd__, __yyyy__: __dd__.__month__ __yyyy__
+
+########################################
+# Page: index.php
+#
+Database error: Datenbank Fehler
+Search: Suche
+Page: Seite
+matches found: Eintr&auml;ge gefunden
+
+########################################
+# Page: translate.php
+#
+English: Englisch
+English-US: Englisch-US
+Afrikaans: Afrikanisch
+Albanian: Albanisch
+Arabic: Arabisch
+Basque: Baskisch
+Bulgarian: Bulgarisch
+Catalan: Katalanisch
+Chinese (Simplified/GB2312): Chinesisch (Einfach&#47;GB2312)
+Chinese (Traditional/Big5): Chinesisch (Traditionel&#47;Big5)
+Croatian: Kroatisch
+Czech: Tschechisch
+Danish: D&auml;nisch
+Dutch: Holl&auml;ndisch
+Elven: Elfisch (Tolkiens Elfensprache)
+Estonian: Estnisch
+Finnish: Finnisch
+French: Franz&ouml;sisch
+Galician: G&auml;lisch
+German: Deutsch
+Greek: Griechisch
+Hebrew: Hebr&auml;isch
+Holo (Taiwanese): Taiwanesisch
+Hungarian: Ungarisch
+Icelandic: Isl&auml;ndisch
+Indonesian: Indonesisch
+Italian: Italienisch
+Japanese: Japanisch
+Korean: Koreanisch
+Lithuanian: Lithauisch
+Norwegian: Norwegisch
+Polish: Polnisch
+Portuguese: Portugiesisch
+Portuguese/Brazil: Portugiesisch&#47;Brasilianisch
+Romanian: Rum&auml;nisch
+Russian: Russisch
+Serbian: Serbisch
+Slovak: Slowakisch
+Slovenian: Slowenisch
+Spanish: Spanisch
+Swedish: Schwedisch
+Turkish: T&uuml;rkisch
+Welsh: Wallisisch
+Browser-defined: Browser-definiert
+0: =
+1: =
+2: =
+3: =
+4: =
+5: =
+6: =
+7: =
+8: =
+9: =

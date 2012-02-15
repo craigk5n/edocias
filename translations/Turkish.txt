@@ -1,0 +1,57 @@
+# See translations/English-US.txt for instructions.
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# by: Elçin Özel - Can Yýlmaz - Mehmet Benlioðlu
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# $Id: Turkish.txt,v 1.38 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Ocak
+February: Subat
+March: Mart
+April: Nisan
+May_: Mayis
+June: Haziran
+July: Temmuz
+August: Agustos
+September: Eylül
+October: Ekim
+November: Kasim
+December: Aralik
+Jan: Oca
+Feb: Sub
+Mar: =
+Apr: Nis
+May: =
+Jun: Haz
+Jul: Tem
+Aug: Agu
+Sep: Eyl
+Oct: Eki
+Nov: Kas
+Dec: Ara
+Sunday: Pazar
+Monday: Pazartesi
+Tuesday: Sali
+Wednesday: Carsamba
+Thursday: Persembe
+Friday: Cuma
+Saturday: Cumartesi
+Sun: Pa
+Mon: Pt
+Tue: Sa
+Wed: Ca
+Thu: Pe
+Fri: Cu
+Sat: Ct
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Search: Arama
+matches found: Bulunan

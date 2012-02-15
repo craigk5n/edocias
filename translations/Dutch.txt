@@ -1,0 +1,106 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by:
+#   Marieke Timmer / marieke.timmer@tijdhof.nl
+#   Arnout Engelen / arnouten@bzzt.net
+#   Oliver Heesakkers / dev@heesakkers.info
+#
+# $Id: Dutch.txt,v 1.64 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Januari
+February: Februari
+March: Maart
+April: =
+May_: Mei
+June: Juni
+July: Juli
+August: Augustus
+September: =
+October: Oktober
+November: =
+December: =
+Jan: jan
+Feb: feb
+Mar: mrt
+Apr: apr
+May: mei
+Jun: jun
+Jul: jul
+Aug: aug
+Sep: sep
+Oct: okt
+Nov: nov
+Dec: dec
+Sunday: Zondag
+Monday: Maandag
+Tuesday: Dinsdag
+Wednesday: Woensdag
+Thursday: Donderdag
+Friday: Vrijdag
+Saturday: Zaterdag
+Sun: zo
+Mon: ma
+Tue: di
+Wed: wo
+Thu: do
+Fri: vr
+Sat: za
+__month__ __dd__, __yyyy__: __dd__ __month__ __yyyy__
+
+########################################
+# Page: index.php
+#
+Database error: Databasefout
+Search: Zoeken
+Page: Pagina
+matches found: afspraken gevonden die overeenkomen met de trefwoorden
+
+########################################
+# Page: translate.php
+#
+English: Engels
+English-US: Engels-VS
+Afrikaans: =
+Albanian: Albanees
+Arabic: Arabisch
+Basque: Baskisch
+Bulgarian: Bulgaars
+Catalan: Catalaans
+Chinese (Simplified/GB2312): Chinees (Vereenvoudigd/GB2312)
+Chinese (Traditional/Big5): Chinees (Traditioneel/Big5)
+Croatian: Kroatisch
+Czech: Tsjechisch
+Danish: Deens
+Dutch: Nederlands
+Estonian: Estlands
+Finnish: Fins
+French: Frans
+Galician: Gallicisch
+German: Duits
+Greek: Grieks
+Hebrew: Hebreeuws
+Holo (Taiwanese): Holo (Taiwans)
+Hungarian: Hongaars
+Icelandic: Ijslands
+Italian: Italiaans
+Japanese: Japans
+Korean: Koreaans
+Lithuanian: Litouws
+Norwegian: Noors
+Polish: Pools
+Portuguese: Portugees
+Portuguese/Brazil: Protugees/Braziliaans
+Romanian: Roemeens
+Russian: Russisch
+Serbian: Servisch
+Slovak: Slovaaks
+Slovenian: Sloveens
+Spanish: Spaans
+Swedish: Zweeds
+Turkish: Turks
+Welsh: Wels(GB)
+Browser-defined: Door browser ingesteld

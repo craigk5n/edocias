@@ -1,0 +1,67 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by:
+# Antonio Costa - accmdq@mail.esoterica.pt
+# Last update: 26-Nov-2004
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# By Paulo Henrique Garcia - paulo@controllerweb.com.br
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# $Id: Portuguese.txt,v 1.47 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Janeiro
+February: Fevereiro
+March: Março
+April: Abril
+May_: Maio
+June: Junho
+July: Julho
+August: Agosto
+September: Setembro
+October: Outubro
+November: Novembro
+December: Dezembro
+Jan: =
+Feb: Fev
+Mar: =
+Apr: Abr
+May: Mai
+Jun: =
+Jul: =
+Aug: Ago
+Sep: Set
+Oct: Out
+Nov: =
+Dec: Dez
+Sunday: Domingo
+Monday: Segunda
+Tuesday: Terça
+Wednesday: Quarta
+Thursday: Quinta
+Friday: Sexta
+Saturday: Sábado
+Sun: Dom
+Mon: Seg
+Tue: Ter
+Wed: Qua
+Thu: Qui
+Fri: Sex
+Sat: Sáb
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Erro na base de dados
+Search: Pesquisar
+matches found: Ocorrências encontradas
+
+########################################
+# Page: translate.php
+#
+Portuguese: Português

@@ -1,0 +1,98 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by:
+# Makoto Hamanaka <VYA04230@nifty.com>
+# Updated many times by Tadashi Jokagi <elf2000@users.sourceforge.net>
+# Last updated: 12-08-2006
+#
+# $Id: Japanese.txt,v 1.52 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: 1 月
+February: 2 月
+March: 3 月
+April: 4 月
+May_: 5 月
+June: 6 月
+July: 7 月
+August: 8 月
+September: 9 月
+October: 10 月
+November: 11 月
+December: 12月
+Jan: 1 月
+Feb: 2 月
+Mar: 3 月
+Apr: 4 月
+May: 5 月
+Jun: 6 月
+Jul: 7 月
+Aug: 8 月
+Sep: 9 月
+Oct: 10 月
+Nov: 11 月
+Dec: 12 月
+Sunday: 日曜日
+Monday: 月曜日
+Tuesday: 火曜日
+Wednesday: 水曜日
+Thursday: 木曜日
+Friday: 金曜日
+Saturday: 土曜日
+Sun: 日
+Mon: 月
+Tue: 火
+Wed: 水
+Thu: 木
+Fri: 金
+Sat: 土
+__month__ __dd__, __yyyy__: __yyyy__ 年 __month__ __dd__ 日
+
+########################################
+# Page: index.php
+#
+Database error: データベースエラー
+Search: 検索
+Page: ページ
+matches found: 個の該当項目が見つかりました。
+
+########################################
+# Page: translate.php
+#
+English: 英語
+English-US: 英語(米国)
+Afrikaans: アフリカ語
+Basque: バスク語
+Bulgarian: ブルガリア語
+Catalan: カタロニア語
+Chinese (Simplified/GB2312): 中国語 (Simplified/GB2312)
+Chinese (Traditional/Big5): 中国語 (Traditional/Big5)
+Croatian: クロアチア語
+Czech: チェコ語
+Danish: デンマーク語
+Dutch: オランダ語
+Estonian: エストニア語
+Finnish: フィンランド語
+French: フランス語
+Galician: ガリシア語
+German: ドイツ語
+Holo (Taiwanese): Holo (台湾語)
+Hungarian: ハンガリー語
+Icelandic: アイスランド語
+Italian: イタリア語
+Japanese: 日本語
+Korean: 韓国語
+Norwegian: ノルウェー語
+Polish: ポーランド語
+Portuguese: ポルトガル語
+Portuguese/Brazil: ブラジル/ポルトガル語
+Romanian: ルーマニア語
+Russian: ロシア語
+Spanish: スペイン語
+Swedish: スウェーデン語
+Turkish: トルコ語
+Welsh: ウェールズ語
+Browser-defined: ブラウザーの定義

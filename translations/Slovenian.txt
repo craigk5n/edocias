@@ -1,0 +1,51 @@
+# See translations/English-US.txt for instructions.
+#
+# Translations by David Milost <mercy@volja.net>, January 2004.
+# 'borrowed' from SourceForge project 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Slovenian.txt,v 1.9 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Januar
+February: Februar
+March: Marec
+April: =
+May_: Maj
+June: Junij
+July: Julij
+August: Avgust
+September: =
+October: Oktober
+November: =
+December: =
+Jan: =
+Feb: =
+Mar: =
+Apr: =
+May: Maj
+Jun: =
+Jul: =
+Aug: Avg
+Sep: =
+Oct: Okt
+Nov: =
+Dec: =
+Sunday: Nedelja
+Monday: Ponedeljek
+Tuesday: Torek
+Wednesday: Sreda
+Thursday: Četrtek
+Friday: Petek
+Saturday: Sobota
+Sun: Ned
+Mon: Pon
+Tue: Tor
+Wed: Sre
+Thu: Čet
+Fri: Pet
+Sat: Sob
+__month__ __dd__, __yyyy__: =

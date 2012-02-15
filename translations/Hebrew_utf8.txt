@@ -1,0 +1,63 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Dov Zamir, dov@zamirfamily.com
+# Last update: 22 July 2006
+#
+# $Id: Hebrew_utf8.txt,v 1.30 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: ינואר
+February: פברואר
+March: מרס
+April: אפריל
+May_: מאי
+June: יוני
+July: יולי
+August: אוגוסט
+September: ספטמבר
+October: אוקטובר
+November: נובמבר
+December: דצמבר
+Jan: ינו
+Feb: פבר
+Mar: מרס
+Apr: אפר
+May: מאי
+Jun: יונ
+Jul: יול
+Aug: אוג
+Sep: ספט
+Oct: אוק
+Nov: נוב
+Dec: דצמ
+Sunday: יום ראשון
+Monday: יום שני
+Tuesday: יום שלישי
+Wednesday: יום רביעי
+Thursday: יום חמישי
+Friday: יום שישי
+Saturday: יום שבת
+Sun: ראש
+Mon: שני
+Tue: שלי
+Wed: רבי
+Thu: חמי
+Fri: שיש
+Sat: שבת
+__month__ __dd__, __yyyy__: __yyyy__/__dd__/__month__
+
+########################################
+# Page: index.php
+#
+Database error: שגיאת בסיס נתונים
+Search: חיפוש
+Page: דף
+matches found: נמצאו התאמות
+
+########################################
+# Page: translate.php
+#
+Browser-defined: מוגדר על ידי הדפדפן

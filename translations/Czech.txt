@@ -1,0 +1,101 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Hanu¹ Adler <had (a) penguin .dot. cz> and Aldar
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Czech.txt,v 1.45 2008/10/15 18:19:59 bbannon Exp $
+#
+# 2007-10-24: Translation encoding and grammar corrected by: Hanu¹ Adler
+# (had (a) actinet .dot. cz)
+#
+# *************** IMPORTANT MESSAGE TO TRANSLATORS *********************
+# Please include your e-mail addresses
+# so that we can sort it out easier
+# and faster than this time. Thanks in advance, had
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: leden
+February: únor
+March: bøezen
+April: duben
+May_: kvìten
+June: èerven
+July: èervenec
+August: srpen
+September: záøí
+October: øíjen
+November: listopad
+December: prosinec
+Jan: led
+Feb: úno
+Mar: bøe
+Apr: dub
+May: kvì
+Jun: èen
+Jul: èec
+Aug: srp
+Sep: záø
+Oct: øíj
+Nov: lis
+Dec: pro
+Sunday: nedìle
+Monday: pondìlí
+Tuesday: úterý
+Wednesday: støeda
+Thursday: ètvrtek
+Friday: pátek
+Saturday: sobota
+Sun: ne
+Mon: po
+Tue: út
+Wed: st
+Thu: èt
+Fri: pá
+Sat: so
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Chyba databáze
+Search: Hledat
+matches found: nalezeny záznamy
+
+########################################
+# Page: translate.php
+#
+English: =
+Basque: =
+Bulgarian: =
+Catalan: =
+Chinese (Simplified/GB2312): =
+Chinese (Traditional/Big5): =
+Czech: èesky
+Danish: =
+Dutch: =
+Estonian: =
+Finnish: =
+French: =
+Galician: =
+German: =
+Holo (Taiwanese): =
+Hungarian: =
+Icelandic: =
+Italian: =
+Japanese: =
+Korean: =
+Norwegian: =
+Polish: =
+Portuguese: =
+Portuguese/Brazil: =
+Romanian: =
+Russian: =
+Spanish: =
+Swedish: =
+Turkish: =

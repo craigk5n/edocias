@@ -1,0 +1,97 @@
+# See translations/English-US.txt for instructions.
+#
+# Χρησιμοποιείστε το αρχείο αυτό για να μεταφράσετε το Ημερολόγιο σε άλλη
+# γλώσσα. Η μορφή είναι "Αγγλικό κείμενο: Μεταφρασμένο κείμενο"
+# Δεν μπορεί να υπάρχει ":" στο αγγλικό κείμενο.
+# Μεταφραστής: Παύλος Γκέσος cham_gss@hotmail.com
+# Τελευταία ενημέρωση: 10 Μαρ 2006
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Greek.txt,v 1.25 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Ιανουάριος
+February: Φεβρουάριος
+March: Μάρτιος
+April: Απρίλιος
+May_: Μάιος
+June: Ιούνιος
+July: Ιούλιος
+August: Αύγουστος
+September: Σεπτέμβριος
+October: Οκτώβριος
+November: Νοέμβριος
+December: Δεκέμβριος
+Jan: Ιαν
+Feb: Φεβ
+Mar: Μαρ
+Apr: Απρ
+May: Μαι
+Jun: Ιουν
+Jul: Ιουλ
+Aug: Αυγ
+Sep: Σεπ
+Oct: Οκτ
+Nov: Νοε
+Dec: Δεκ
+Sunday: Κυριακή
+Monday: Δευτέρα
+Tuesday: Τρίτη
+Wednesday: Τετάρτη
+Thursday: Πέμπτη
+Friday: Παρασκευή
+Saturday: Σάββατο
+Sun: Κυρ
+Mon: Δευ
+Tue: Τρι
+Wed: Τετ
+Thu: Πεμ
+Fri: Παρ
+Sat: Σαβ
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Σφάλμα στη βάση δεδομένων
+Search: Αναζήτηση
+matches found: Βρέθηκαν ταιριάσματα
+
+########################################
+# Page: translate.php
+#
+English: Αγγλικά
+Basque: Βάσκικα
+Bulgarian: Βουλγαρικά
+Catalan: Καταλανικά
+Chinese (Simplified/GB2312): Κινέζικα (Απλοποιημένα/GB2312)
+Chinese (Traditional/Big5): Κινέζικα (Παραδοσιακά/Big5)
+Czech: Τσέχικα
+Danish: Δανέζικα
+Estonian: Εσθονικά
+Finnish: Φινλανδικά
+French: Γαλλικά
+German: Γερμανικά
+Greek: Ελληνικά
+Holo (Taiwanese): Holo (Ταϊβανέζικα)
+Hungarian: Ουγγαρικά
+Icelandic: Ισλανδικά
+Italian: Ιταλικά
+Japanese: Γιαπωνέζικα
+Korean: Κορεατικά
+Norwegian: Νορβηγικά
+Polish: Πολωνικά
+Portuguese: Πορτογαλλικά
+Portuguese/Brazil: Πορτογαλλικά/Βραζιλιάνικα
+Romanian: Ρουμανικά
+Russian: Ρωσικά
+Spanish: Ισπανικά
+Swedish: Ελβετικά
+Turkish: Τουρκικά
+Welsh: Ουαλλικά

@@ -6,6 +6,14 @@
  * Configuration settings.
  */
 
+// Specify the language.  By default, the language be autodetected from the
+// end user's browser preferences (via the HTTP request header).
+// Leave this blank to auto-detect.
+// To force a particular language, pull one of the language abbreviations
+// from the $browser_languages array in translate.php.
+// Examples include 'en-us', 'de', 'fr', etc.
+$language = '';
+
 // How many search matches to display before switching to pagination
 $maxMatchesBeforePagination = 50;
 

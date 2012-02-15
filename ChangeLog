@@ -9,5 +9,7 @@ Version 1.1 (13 Feb 2012)
     alter table edm_doc add column doctitle VARCHAR(256) NULL;
 - Added tools/webcalendar.php (bundled in tools.zip) as a way of also
   indexing all events in a local WebCalendar installation.
+- Added translations to different languages using WebCalendar's translations
+  as a starting point.
 Version 1.0 (07 Feb 2012)
 - Initial version

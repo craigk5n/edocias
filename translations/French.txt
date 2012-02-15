@@ -1,0 +1,131 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Yves Moenner <yves.moenner@mailcity.com>
+# Checked by: Romuald Texier <romualdt@free.fr>
+# Mise à jour : Gérard Delafond
+# Update by : Luc Capronnier, Wilfrid Hubert
+# Mise à jour : Mario Dragone <mario.dragone@reims.iufm.fr>
+# Update by : erational <http://www.erational.org>
+# Mise à jour : Ivan Machetto
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# by: bruno@ioda-net.ch 09.08.2003
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: French.txt,v 1.72 2010/02/21 08:27:50 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: janvier
+February: février
+March: mars
+April: avril
+May_: mai
+June: juin
+July: juillet
+August: août
+September: septembre
+October: octobre
+November: novembre
+December: décembre
+Jan: =
+Feb: Fév
+Mar: =
+Apr: Avr
+May: Mai
+Jun: =
+Jul: Jui
+Aug: Aoû
+Sep: =
+Oct: =
+Nov: =
+Dec: Déc
+Sunday: Dimanche
+Monday: Lundi
+Tuesday: Mardi
+Wednesday: Mercredi
+Thursday: Jeudi
+Friday: Vendredi
+Saturday: Samedi
+Sun: Dim
+Mon: Lun
+Tue: Mar
+Wed: Mer
+Thu: Jeu
+Fri: Ven
+Sat: Sam
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Erreur base de données
+There are currently XXX documents.: Il ya actuellement documents XXX
+Search: Rechercher
+Page: =
+Showing matches XXXSTARTXXX to XXXENDXXX: Affichage XXXSTARTXXX matches XXXENDXXX
+matches found: événements correspondent à votre recherche
+
+########################################
+# Page: translate.php
+#
+English: Anglais
+English-US: =
+Afrikaans: =
+Albanian: =
+Arabic: =
+Basque: =
+Bulgarian: Bulgare
+Catalan: =
+Chinese (Simplified/GB2312): Chinois (Simplifié/GB2312)
+Chinese (Traditional/Big5): Chinois (Traditionnel/Big5)
+Croatian: Croate
+Czech: Tchèque
+Danish: Danois
+Dutch: Néerlandais
+Elven: =
+Estonian: Estonien
+Finnish: Finnois
+French: Français
+Galician: Galicien
+German: Allemand
+Greek: Grec
+Hebrew: =
+Holo (Taiwanese): Taïwanais
+Hungarian: Hongrois
+Icelandic: Islandais
+Indonesian: Indonésien
+Italian: Italien
+Japanese: Japonais
+Korean: Coréen
+Lithuanian: Lithuanien
+Norwegian: Norvégien
+Polish: Polonais
+Portuguese: Portuguais
+Portuguese/Brazil: Portuguais/Brézilien
+Romanian: Roumain
+Russian: Russe
+Serbian: Serbe
+Slovak: Slovaquien
+Slovenian: =
+Spanish: Espagnol
+Swedish: Suédois
+Turkish: Turque
+Welsh: Gallois
+Browser-defined: Définit par fureteur
+0: =
+1: =
+2: =
+3: =
+4: =
+5: =
+6: =
+7: =
+8: =
+9: =

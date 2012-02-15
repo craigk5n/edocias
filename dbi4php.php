@@ -207,7 +207,7 @@ function dbi_connect( $host, $login, $password, $database, $lazy = true ) {
 
     if( ! $c ) {
       echo str_replace( 'XXX', $db_sqlite_error_str,
-        translate( 'Error connecting to database XXX' ) ) . "\n";
+        'Error connecting to database XXX' ) . "\n";
       exit;
     }
     $db_connection_info['connected']  = true;
@@ -219,7 +219,7 @@ function dbi_connect( $host, $login, $password, $database, $lazy = true ) {
 
     if( ! $c ) {
       echo str_replace( 'XXX', $db_sqlite_error_str,
-        translate( 'Error connecting to database XXX' ) ) . "\n";
+        'Error connecting to database XXX' ) . "\n";
       exit;
     }
     $db_connection_info['connected']  = true;
@@ -229,9 +229,7 @@ function dbi_connect( $host, $login, $password, $database, $lazy = true ) {
   } else
     dbi_fatal_error( 'dbi_connect(): '
      . ( empty( $GLOBALS['db_type'] )
-        ? translate( 'db_type not defined.' )
-        : str_replace( 'XXX', $GLOBALS['db_type'],
-          translate( 'invalid db_type XXX' ) ) ) );
+        ? 'db_type not defined.' : 'invalid db_type XXX' ) );
 }
 
 /**
@@ -287,8 +285,7 @@ function dbi_close( $conn ) {
   elseif( strcmp( $GLOBALS['db_type'], 'sqlite3' ) == 0 )
     return sqlite3_close( $conn );
   else
-    dbi_fatal_error( 'dbi_close(): '
-       . translate( 'db_type not defined.' ) );
+    dbi_fatal_error( 'dbi_close(): db_type not defined.' );
 }
 
 /**
@@ -357,7 +354,7 @@ function dbi_query( $sql, $fatalOnError = true, $showError = true ) {
       dbi_clear_cache();
 
       if( ! empty( $db_connection_info['debug'] ) )
-        $SQLLOG[] = translate( 'Cache cleared from previous SQL!' );
+        $SQLLOG[] = 'Cache cleared from previous SQL!';
     }
   }
 
@@ -384,7 +381,7 @@ function dbi_query( $sql, $fatalOnError = true, $showError = true ) {
   } elseif( strcmp( $GLOBALS['db_type'], 'oracle' ) == 0 ) {
     if( false === $GLOBALS['oracle_statement'] =
         OCIParse( $GLOBALS['oracle_connection'], $sql ) )
-      dbi_fatal_error( translate( 'Error executing query.' )
+      dbi_fatal_error( 'Error executing query.'
        . $phpdbiVerbose ? ( dbi_error() . "\n\n<br />\n" . $sql ) : ''
        . '', $fatalOnError, $showError );
       return OCIExecute( $GLOBALS['oracle_statement'], OCI_COMMIT_ON_SUCCESS );
@@ -401,13 +398,13 @@ function dbi_query( $sql, $fatalOnError = true, $showError = true ) {
 
   if( $found_db_type ) {
     if( ! $res )
-      dbi_fatal_error( translate( 'Error executing query.' )
+      dbi_fatal_error( 'Error executing query.'
        . ( $phpdbiVerbose ? ( dbi_error() . "\n\n<br />\n" . $sql ) : '' ),
          $fatalOnError, $showError );
 
     return $res;
   } else
-    dbi_fatal_error( 'dbi_query(): ' . translate( 'db_type not defined.' ) );
+    dbi_fatal_error( 'dbi_query(): db_type not defined.' );
 }
 
 /**
@@ -450,8 +447,7 @@ function dbi_fetch_row( $res ) {
   elseif( strcmp( $GLOBALS['db_type'], 'sqlite3' ) == 0 )
     return sqlite3_fetch( $res );
   else
-    dbi_fatal_error( 'dbi_fetch_row(): '
-     . translate( 'db_type not defined.' ) );
+    dbi_fatal_error( 'dbi_fetch_row(): db_type not defined.' );
 }
 
 /**
@@ -489,8 +485,7 @@ function dbi_affected_rows( $conn, $res ) {
   elseif( strcmp( $GLOBALS['db_type'], 'sqlite3' ) == 0 )
     return sqlite3_changes( $conn );
   else
-    dbi_fatal_error( 'dbi_free_result(): '
-     . translate( 'db_type not defined.' ) );
+    dbi_fatal_error( 'dbi_free_result(): db_type not defined.' );
 }
 
 /**
@@ -511,7 +506,7 @@ function dbi_update_blob( $table, $column, $key, $data ) {
 
   $unavail_DBI_Update_blob = str_replace( array( 'XXX', 'YYY' ),
     array( '"dbi_update_blob"', $GLOBALS['db_type'] ),
-    translate( 'Unfortunately, XXX is not implemented for YYY' ) );
+    'Unfortunately, XXX is not implemented for YYY' );
 
   assert( '! empty( $table )' );
   assert( '! empty( $column )' );
@@ -616,8 +611,7 @@ function dbi_free_result( $res ) {
   elseif( strcmp( $GLOBALS['db_type'], 'sqlite3' ) == 0 )
     return sqlite3_query_close( $res );
   else
-    dbi_fatal_error( 'dbi_free_result(): '
-       . translate( 'db_type not defined.' ) );
+    dbi_fatal_error( 'dbi_free_result(): db_type not defined.' );
 }
 
 /**
@@ -643,7 +637,7 @@ function dbi_error() {
     $ret = $GLOBALS['db_connection']->error;
   elseif( strcmp( $GLOBALS['db_type'], 'odbc' ) == 0 )
     // No way to get error from ODBC API.
-    $ret = translate( 'Unknown ODBC error.' );
+    $ret = 'Unknown ODBC error.';
   elseif( strcmp( $GLOBALS['db_type'], 'oracle' ) == 0 ) {
     $e = OCIError( $GLOBALS['oracle_connection']
       ? $GLOBALS['oracle_connection'] : '' );
@@ -665,9 +659,9 @@ function dbi_error() {
       $GLOBALS['db_sqlite_error_str'] = '';
     }
   } else
-    $ret = 'dbi_error(): ' . translate( 'db_type not defined.' );
+    $ret = 'dbi_error(): db_type not defined.';
 
-  return ( strlen( $ret ) ? $ret : translate( 'Unknown error.' ) );
+  return ( strlen( $ret ) ? $ret : 'Unknown error.' );
 }
 
 /**
@@ -680,7 +674,7 @@ function dbi_error() {
  */
 function dbi_fatal_error( $msg, $doExit = true, $showError = true ) {
   if( $showError ) {
-    echo '<h2>' . translate( 'Error' ) . '</h2>
+    echo '<h2>Error</h2>
 <!--begin_error (dbierror)-->
 ' . $msg . '
 <!--end_error-->
@@ -775,7 +769,7 @@ function dbi_execute( $sql, $params = array(), $fatalOnError = true,
   if( strcmp( $GLOBALS['db_type'], 'sqlite3' ) == 0 )
     if( ! sqlite3_exec( $GLOBALS['sqlite_c'], $prepared ) )
       dbi_fatal_error( str_replace( 'XXX', $prepared,
-        translate( 'Cannot execute SQLite3 command XXX' ) ),
+        'Cannot execute SQLite3 command XXX' ),
         $fatalOnError, $showError );
 
   return dbi_query( $prepared, $fatalOnError, $showError );
@@ -886,7 +880,7 @@ function dbi_clear_cache() {
 
   if( empty( $fd ) )
     dbi_fatal_error( str_replace( 'XXX', $db_connection_info['cachedir'],
-      translate( 'Error opening cache dir XXX.' ) ) );
+      'Error opening cache dir XXX.' ) );
 
   $b = 0;
   $errcnt = 0;
@@ -901,8 +895,8 @@ function dbi_clear_cache() {
       if( ! @unlink( $fullpath ) ) {
          $errcnt++;
          $errstr .= '<!-- ' . str_replace( array( 'XXX', 'YYY' ),
-           array( translate( 'delete' ), $file ),
-           translate( 'Cache error Could not XXX file YYY.' ) ) . " -->\n";
+           array( 'delete', $file ),
+           'Cache error Could not XXX file YYY.' ) . " -->\n";
         // TODO: log this somewhere???
       }
     }

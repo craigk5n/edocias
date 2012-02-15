@@ -1,0 +1,51 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Martynas Majeris, <martynas@solmetra.lt>, March 2005,
+# 'borrowed' from SourceForge project 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Lithuanian.txt,v 1.8 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Sausis
+February: Vasaris
+March: Kovas
+April: Balandis
+May_: Geguþë
+June: Birþelis
+July: Liepa
+August: Rugpjûtis
+September: Rugsëjis
+October: Spalis
+November: Lapkritis
+December: Gruodis
+Jan: Sau
+Feb: Vas
+Mar: Kov
+Apr: Bal
+May: Geg
+Jun: Bir
+Jul: Lie
+Aug: Rgp
+Sep: Rgs
+Oct: Spa
+Nov: Lap
+Dec: Gru
+Sunday: Sekmadienis
+Monday: Pirmadienis
+Tuesday: Antradienis
+Wednesday: Treèiadienis
+Thursday: Ketvirtadienis
+Friday: Pentadienis
+Saturday: Ðeðtadienis
+Sun: Sek
+Mon: Pir
+Tue: Ant
+Wed: Tre
+Thu: Ket
+Fri: Pen
+Sat: Ðeð
+__month__ __dd__, __yyyy__: =

@@ -1,0 +1,32 @@
+# See translations/English-US.txt for instructions.
+#
+# Translations by Krunoslav Zubrinic <krunoslav.zubrinic@vip.hr>, June 2003.
+# 'borrowed' from SourceForge project 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Croatian_utf8.txt,v 1.8 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Siječanj
+February: Veljača
+March: Ožujak
+April: Travanj
+May_: Svibanj
+June: Lipanj
+July: Srpanj
+August: Kolovoz
+September: Rujan
+October: Listopad
+November: Studeni
+December: Prosinac
+Sunday: Nedjelja
+Monday: Ponedjeljak
+Tuesday: Utorak
+Wednesday: Srijeda
+Thursday: Četvrtak
+Friday: Petak
+Saturday: Subota
+__month__ __dd__, __yyyy__: =

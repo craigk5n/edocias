@@ -1,0 +1,106 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by:
+# Andre E. Bar'yudin <baryudin@pob.huji.ac.il>
+# Ilya G. Teterev <remirran@gmail.com>
+# Last update: Wed Oct 25 14:34:05 IST 2000
+#
+# $Id: Russian_utf8.txt,v 1.32 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Январь
+February: Февраль
+March: Март
+April: Апрель
+May_: Май
+June: Июнь
+July: Июль
+August: Август
+September: Сентябрь
+October: Октябрь
+November: Ноябрь
+December: Декабрь
+Jan: Янв
+Feb: Фев
+Mar: Мар
+Apr: Апр
+May: Май
+Jun: Июн
+Jul: Июл
+Aug: Авг
+Sep: Сен
+Oct: Окт
+Nov: Ноя
+Dec: Дек
+Sunday: Воскресенье
+Monday: Понедельник
+Tuesday: Вторник
+Wednesday: Среда
+Thursday: Четверг
+Friday: Пятница
+Saturday: Суббота
+Sun: Вск
+Mon: Пнд
+Tue: Втр
+Wed: Срд
+Thu: Чтв
+Fri: Птн
+Sat: Сбт
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Ошибка базы данных
+Search: Поиск
+Page: Страница
+matches found: найдены соответствия
+
+########################################
+# Page: translate.php
+#
+English: Английский
+English-US: Английский США
+Afrikaans: Африкаанс
+Albanian: Алюанский
+Arabic: Арабский
+Basque: Баскский
+Bulgarian: Волгарский
+Catalan: Каталанский
+Chinese (Simplified/GB2312): Китайский (Упрощенный/GB2312)
+Chinese (Traditional/Big5): Китайский (Традиционный/Big5)
+Croatian: Хорватский
+Czech: Чешский
+Danish: Датский
+Dutch: Голландский
+Estonian: Эстонский
+Finnish: Финский
+French: Французский
+Galician: Галицианский
+German: Немецкий
+Greek: Греческий
+Hebrew: Еврейский
+Holo (Taiwanese): Холо (Тайваньский)
+Hungarian: Венгерский
+Icelandic: Исландский
+Italian: Итальянский
+Japanese: Японский
+Korean: Корейский
+Lithuanian: Литовский
+Norwegian: Норвежский
+Polish: Польский
+Portuguese: Португальский
+Portuguese/Brazil: Португальский/Бразилия
+Romanian: Румынский
+Russian: Русский
+Serbian: Сербский
+Slovak: Словацкий
+Slovenian: Словенский
+Spanish: Испанский
+Swedish: Шведский
+Turkish: Турецкий
+Welsh: Валлийский
+Browser-defined: Определенный браузером

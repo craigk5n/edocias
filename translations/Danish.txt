@@ -1,0 +1,104 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Allan Thraen (allan@12go.dk)
+# Updated by:
+# Jørgen Thomsen (jth@jth.net), 12-Feb-2001
+# Jens Th (photo@jens-th.com), Nov.25-2003
+# (Nicolaj Rasmussen, drlandau <at> msn <dot> com), 15-Feb-2004
+# (Morten Nielsen, mni <at> it <dot> dk), 21-Mar-2005
+# (Leo Todaro, leotodaro <at> hotmail.com), 18-Jun-2005
+# Last update: 18-Jun-2005
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# by: Mikael Stokkebro <info@stokkebro.dk>
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Danish.txt,v 1.46 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Januar
+February: Februar
+March: Marts
+April: =
+May_: Maj
+June: Juni
+July: Juli
+August: =
+September: =
+October: Oktober
+November: =
+December: =
+Jan: =
+Feb: =
+Mar: =
+Apr: =
+May: Maj
+Jun: =
+Jul: =
+Aug: =
+Sep: =
+Oct: Okt
+Nov: =
+Dec: =
+Sunday: Søndag
+Monday: Mandag
+Tuesday: Tirsdag
+Wednesday: Onsdag
+Thursday: Torsdag
+Friday: Fredag
+Saturday: Lørdag
+Sun: Søn
+Mon: Man
+Tue: Tir
+Wed: Ons
+Thu: Tor
+Fri: Fre
+Sat: Lør
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Database fejl
+Search: Søg
+matches found: emner fundet
+
+########################################
+# Page: translate.php
+#
+English: Engelsk
+Basque: Bastisk
+Bulgarian: Bulgarsk
+Catalan: Katalansk
+Chinese (Simplified/GB2312): Kinesisk (Simplified/GB2312)
+Chinese (Traditional/Big5): Kinesisk (Traditional/Big5)
+Czech: Tjekkisk
+Danish: Dansk
+Dutch: Hollandsk
+Estonian: Estonsk
+Finnish: Finsk
+French: Fransk
+Galician: Galisisk
+German: Tysk
+Holo (Taiwanese): Holo (Taiwanesisk)
+Hungarian: Ugngarsk
+Icelandic: Islandsk
+Italian: Italiensk
+Japanese: Japansk
+Korean: Koreansk
+Norwegian: Norsk
+Polish: Polsk
+Portuguese: Portugisisk
+Portuguese/Brazil: Portugisisk/Brasiliansk
+Romanian: Rumænsk
+Russian: Russisk
+Spanish: Spansk
+Swedish: Svensk
+Turkish: Tykisk

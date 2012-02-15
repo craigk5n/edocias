@@ -1,0 +1,131 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by:
+# Simone Cortesi <php@cortesi.com>
+# Alessandro <a.orlandi@iol.it>
+# Last update: 22 July 2000
+#
+# Paolo 18 Nov 2007
+# https://sourceforge.net/tracker/index.php?func=detail&aid=1834285&group_id=3870&atid=303870
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# by: Ilias Bartolini <brain79@inwind.it>
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Italian.txt,v 1.53 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Gennaio
+February: Febbraio
+March: Marzo
+April: Aprile
+May_: Maggio
+June: Giugno
+July: Luglio
+August: Agosto
+September: Settembre
+October: Ottobre
+November: Novembre
+December: Dicembre
+Jan: Gen
+Feb: =
+Mar: =
+Apr: =
+May: Mag
+Jun: Giu
+Jul: Lug
+Aug: Ago
+Sep: Set
+Oct: Ott
+Nov: =
+Dec: Dic
+Sunday: Domenica
+Monday: Luned&igrave;
+Tuesday: Marted&igrave;
+Wednesday: Mercoled&igrave;
+Thursday: Gioved&igrave;
+Friday: Venerd&igrave;
+Saturday: Sabato
+Sun: Dom
+Mon: Lun
+Tue: Mar
+Wed: Mer
+Thu: Gio
+Fri: Ven
+Sat: Sab
+__month__ __dd__, __yyyy__: __dd__ __month__, __yyyy__
+
+########################################
+# Page: index.php
+#
+Database error: Errore nel database
+There are currently XXX documents.: Ci sono attualmente XXX documenti.
+Search: Cerca
+Page: Pagina
+Showing matches XXXSTARTXXX to XXXENDXXX: Visualizza XXXSTARTXXX partite per XXXENDXXX
+matches found: corrispondenze trovate
+
+########################################
+# Page: translate.php
+#
+English: Inglese
+English-US: Inglese-US
+Afrikaans: Africano
+Albanian: Albanese
+Arabic: Arabo
+Basque: Basco
+Bulgarian: Bulgaro
+Catalan: Catalano
+Chinese (Simplified/GB2312): Cinese (Semplificato/GB2312)
+Chinese (Traditional/Big5): Cinese (Tradizionale/Big5)
+Croatian: Croato
+Czech: Ceco
+Danish: Danese
+Dutch: Olandese
+Elven: =
+Estonian: Estone
+Finnish: Finlandese
+French: Francese
+Galician: Galiziano
+German: Tedesco
+Greek: Greco
+Hebrew: =
+Holo (Taiwanese): =
+Hungarian: Ungherese
+Icelandic: Islandese
+Indonesian: Indonesiano
+Italian: Italiano
+Japanese: Giapponese
+Korean: Coreano
+Lithuanian: =
+Norwegian: Norvegese
+Polish: Polacco
+Portuguese: Portoghese
+Portuguese/Brazil: Portoghese/Brasile
+Romanian: Romeno
+Russian: Russo
+Serbian: Serbo
+Slovak: Slovacco
+Slovenian: Sloveno
+Spanish: Spagnolo
+Swedish: Svedese
+Turkish: Turco
+Welsh: =
+Browser-defined: conforme al navigatore
+0: =
+1: =
+2: =
+3: =
+4: =
+5: =
+6: =
+7: =
+8: =
+9: =

@@ -1,0 +1,68 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by:
+#       Traduït
+#       traduit.com
+#       info@traduit.com
+# Last update: 12 May 2004
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# By Ivan: web AT microstudi DOT com
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Catalan.txt,v 1.27 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Gener
+February: Febrer
+March: Març
+April: Abril
+May_: Maig
+June: Juny
+July: Juliol
+August: Agost
+September: Setembre
+October: Octubre
+November: Novembre
+December: Desembre
+Jan: Gen
+Feb: =
+Mar: =
+Apr: Abr
+May: Mai
+Jun: =
+Jul: =
+Aug: Ago
+Sep: Set
+Oct: =
+Nov: =
+Dec: Des
+Sunday: Diumenge
+Monday: Dilluns
+Tuesday: Dimarts
+Wednesday: Dimecres
+Thursday: Dijous
+Friday: Divendres
+Saturday: Dissabte
+Sun: Dg
+Mon: Dl
+Tue: Dm
+Wed: Dx
+Thu: Dj
+Fri: Dv
+Sat: Ds
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Error de base de dades
+Search: Cerca
+matches found: coincidències trobades

@@ -1,0 +1,100 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Yves Moenner <yves.moenner@mailcity.com>
+# Checked by: Romuald Texier <romualdt@free.fr>
+# Updated by : Gérard Delafond
+# Updated by : Luc Capronnier, Wilfrid Hubert
+# Updated by : Mario Dragone <mario.dragone@reims.iufm.fr>
+# Updated by : erational <http://www.erational.org>
+# Updated by : Ivan Machetto
+# Cleared, finished and polished by:
+#  Emmanuel Rihn <acontrecourant_at_online_fr>
+# Last updated on July 21 2006
+#
+# $Id: French-UTF8.txt,v 1.28 2010/02/21 08:27:50 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: janvier
+February: février
+March: mars
+April: avril
+May_: mai
+June: juin
+July: juillet
+August: août
+September: septembre
+October: octobre
+November: novembre
+December: décembre
+Jan: =
+Feb: Fév
+Mar: =
+Apr: Avr
+May: Mai
+Jun: =
+Jul: =
+Aug: Aoû
+Sep: =
+Oct: =
+Nov: =
+Dec: Déc
+Sunday: Dimanche
+Monday: Lundi
+Tuesday: Mardi
+Wednesday: Mercredi
+Thursday: Jeudi
+Friday: Vendredi
+Saturday: Samedi
+Sun: Dim
+Mon: Lun
+Tue: Mar
+Wed: Mer
+Thu: Jeu
+Fri: Ven
+Sat: Sam
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Erreur de la base de données
+Search: Rechercher
+matches found: événements correspondent à votre recherche
+
+########################################
+# Page: translate.php
+#
+English: Anglais
+Basque: =
+Bulgarian: Bulgare
+Catalan: =
+Chinese (Simplified/GB2312): Chinois (Simplifié/GB2312)
+Chinese (Traditional/Big5): Chinois (Traditionnel/Big5)
+Czech: Tchèque
+Danish: Danois
+Dutch: Néerlandais
+Estonian: Estonien
+Finnish: Finnois
+French: Français
+Galician: Galicien
+German: Allemand
+Greek: Grec
+Holo (Taiwanese): Taïwanais
+Hungarian: Hongrois
+Icelandic: Islandais
+Italian: Italien
+Japanese: Japonais
+Korean: Coréen
+Norwegian: Norvégien
+Polish: Polonais
+Portuguese: Portuguais
+Portuguese/Brazil: Portuguais/Brézilien
+Romanian: Roumain
+Russian: Russe
+Spanish: Espagnol
+Swedish: Suédois
+Turkish: Turque
+Welsh: Gallois

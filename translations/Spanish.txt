@@ -1,0 +1,101 @@
+# See translations/English-US.txt for instructions.
+#
+# Translator: Francisco M. Pérez Rilo
+# Pedro Del Medico <pdmp@interhoster.com>
+# Eduardo Dominguez <lalo_notthisplease@teligens.com>
+# Mario Benito <mbenito@maberi.com>
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Spanish.txt,v 1.44 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Enero
+February: Febrero
+March: Marzo
+April: Abril
+May_: Mayo
+June: Junio
+July: Julio
+August: Agosto
+September: Septiembre
+October: Octubre
+November: Noviembre
+December: Diciembre
+Jan: Ene
+Feb: =
+Mar: =
+Apr: Abr
+May: =
+Jun: =
+Jul: =
+Aug: Ago
+Sep: =
+Oct: =
+Nov: =
+Dec: Dic
+Sunday: Domingo
+Monday: Lunes
+Tuesday: Martes
+Wednesday: Miércoles
+Thursday: Jueves
+Friday: Viernes
+Saturday: Sabado
+Sun: Dom
+Mon: Lun
+Tue: Mar
+Wed: Mie
+Thu: Jue
+Fri: Vie
+Sat: Sab
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Error en base de datos
+There are currently XXX documents.: En este momento hay XXX documentos.
+Search: Buscar
+Showing matches XXXSTARTXXX to XXXENDXXX: Partidos mostrando XXXSTARTXXX al XXXENDXXX
+matches found: aciertos encontrados
+
+########################################
+# Page: translate.php
+#
+English: Inglés
+Basque: Euskera
+Bulgarian: Búlgaro
+Catalan: Català
+Chinese (Simplified/GB2312): Chino (Simplified/GB2312)
+Chinese (Traditional/Big5): Chino (Traditional/Big5)
+Czech: Checo
+Danish: Danés
+Dutch: Holandés
+Estonian: Estonio
+Finnish: Finés
+French: Francés
+Galician: Galego
+German: Alemán
+Holo (Taiwanese): Taiwanés
+Hungarian: Húngaro
+Icelandic: Islandés
+Italian: Italiano
+Japanese: Japonés
+Korean: Koreano
+Norwegian: Noruego
+Polish: Polaco
+Portuguese: Portugués
+Portuguese/Brazil: Portugués/Brasil
+Romanian: Rumano
+Russian: Ruso
+Spanish: Español
+Swedish: Sueco
+Turkish: Turco

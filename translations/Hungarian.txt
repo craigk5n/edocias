@@ -1,0 +1,97 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Gyorgy Baffia <gyorgy@baffia.hu>, 05 Sep 2001
+#
+# Cleared, finished and polished by:
+# Laszlo Csecsy <_boobaa_at_ajrg_point_hu_>
+# Last updated on 2005-05-31
+# Updated to 1.1 by Istvan Bubreg bubreg_at_freemail_hu
+#
+# $Id: Hungarian.txt,v 1.49 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Január
+February: Február
+March: Március
+April: Április
+May_: Május
+June: Június
+July: Július
+August: Augusztus
+September: Szeptember
+October: Október
+November: =
+December: =
+Jan: =
+Feb: =
+Mar: Márc
+Apr: Ápr
+May: Máj
+Jun: Jún
+Jul: Júl
+Aug: =
+Sep: Szept
+Oct: Okt
+Nov: =
+Dec: =
+Sunday: Vasárnap
+Monday: Hétfõ
+Tuesday: Kedd
+Wednesday: Szerda
+Thursday: Csütörtök
+Friday: Péntek
+Saturday: Szombat
+Sun: Vas
+Mon: Hét
+Tue: Ke
+Wed: Sze
+Thu: Csü
+Fri: Pé
+Sat: Szo
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Adatbázis hiba
+Search: Keresés
+matches found: egyezést találtam
+
+########################################
+# Page: translate.php
+#
+English: angol
+English-US: Angol-US
+Basque: baszk
+Bulgarian: bolgár
+Catalan: katalán
+Chinese (Simplified/GB2312): kínai (GB2312)
+Chinese (Traditional/Big5): kínai (tradicionális/Big5)
+Czech: cseh
+Danish: dán
+Dutch: holland
+Estonian: észt
+Finnish: finn
+French: francia
+Galician: galíciai
+German: német
+Greek: Görög
+Holo (Taiwanese): holo (taiwani)
+Hungarian: magyar
+Icelandic: izlandi
+Italian: olasz
+Japanese: japán
+Korean: koreai
+Norwegian: norvég
+Polish: lengyel
+Portuguese: portugál
+Portuguese/Brazil: brazil portugál
+Romanian: Román
+Russian: orosz
+Spanish: spanyol
+Swedish: svéd
+Turkish: török
+Welsh: Welszi

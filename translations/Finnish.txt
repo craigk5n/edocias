@@ -1,0 +1,65 @@
+# See translations/English-US.txt for instructions.
+#
+# Finnish translation by Juha-Matti Åberg (juffe@liveware.fi)
+# Updated for WebCal 1.0RC2 by Jussi Siponen (jussi.siponen@posiona.com)
+#
+# Translations for page: includes/classes/WebCalMailer.class
+# By Jyry Kuukanen
+# loaded from PHPMailer, https://sourceforge.net/projects/phpmailer
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Finnish.txt,v 1.41 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Tammikuu
+February: Helmikuu
+March: Maaliskuu
+April: Huhtikuu
+May_: Toukokuu
+June: Kesäkuu
+July: Heinäkuu
+August: Elokuu
+September: Syyskuu
+October: Lokakuu
+November: Marraskuu
+December: Joulukuu
+Jan: Tammi
+Feb: Helmi
+Mar: Maalis
+Apr: Huhti
+May: Touko
+Jun: Kesä
+Jul: Heinä
+Aug: Elo
+Sep: Syys
+Oct: Loka
+Nov: Marras
+Dec: Joulu
+Sunday: Sunnuntai
+Monday: Maanantai
+Tuesday: Tiistai
+Wednesday: Keskiviikko
+Thursday: Torstai
+Friday: Perjantai
+Saturday: Lauantai
+Sun: Su
+Mon: Ma
+Tue: Ti
+Wed: Ke
+Thu: To
+Fri: Pe
+Sat: La
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Tietokantavirhe
+Search: Etsi
+matches found: kohdetta löytyi

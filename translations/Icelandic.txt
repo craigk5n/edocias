@@ -1,0 +1,56 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Kristofer Arnar Einarsson kristofer@kristofer.com
+# Last update: 18 August 2000
+#
+# $Id: Icelandic.txt,v 1.35 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Janúar
+February: Febrúar
+March: Mars
+April: Apríl
+May_: Maí
+June: Júní
+July: Júlí
+August: Ágúst
+September: =
+October: Október
+November: Nóvember
+December: Desember
+Jan: =
+Feb: =
+Mar: =
+Apr: =
+May: Maí
+Jun: Jún
+Jul: Júl
+Aug: Ágú
+Sep: =
+Oct: Okt
+Nov: Nóv
+Dec: Des
+Sunday: Sunnudagur
+Monday: Mánudagur
+Tuesday: Þriðjudagur
+Wednesday: Miðvikudagur
+Thursday: Fimmtudagur
+Friday: Föstudagur
+Saturday: Laugardagur
+Sun: =
+Mon: Mán
+Tue: Þri
+Wed: Mið
+Thu: Fim
+Fri: Fös
+Sat: Lau
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Search: Leit
+matches found: fundust

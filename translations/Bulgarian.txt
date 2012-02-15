@@ -1,0 +1,60 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Malen Malenov malen_malenov@yahoo.com
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Bulgarian.txt,v 1.18 2008/10/13 22:03:04 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: /=C0@8
+February: $52@C0@8
+March: 0@B
+April: ?@8;
+May_: 09
+June: .=8
+July: .;8
+August: 23CAB
+September: !5?B5<2@8
+October: :B><2@8
+November: >5<2@8
+December: 5:5<2@8
+Jan: /=C0@8
+Feb: $52@C0@8
+Mar: 0@B
+Apr: ?@8;
+May: 09
+Jun: .=8
+Jul: .;8
+Aug: 23CAB
+Sep: !5?B5<2@8
+Oct: :B><2@8
+Nov: >5<2@8
+Dec: 5:5<2@8
+Sunday: 545;O
+Monday: >=545;=8:
+Tuesday: B>@=8:
+Wednesday: !@O40
+Thursday: '5B2J@BJ:
+Friday: 5BJ:
+Saturday: !J1>B0
+Sun: 54
+Mon: >=
+Tue: B>
+Wed: !@O
+Thu: '5B
+Fri: 5B
+Sat: !J1
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: @5H:0 2 1070B0 40==8
+Search: "J@A5=5
+matches found: =0<5@5=8 AJ>B25BAB28O

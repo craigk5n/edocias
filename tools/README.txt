@@ -1,5 +1,5 @@
 This directory contains tools that may be useful for extracting text from
-binary files.
+binary files AND tools for working with language translation files.
 
 This entire directory will be zipped into a file (tools.zip) which will
 be included in each release.  We do this so that we don't create any type

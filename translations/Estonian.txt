@@ -1,0 +1,57 @@
+# See translations/English-US.txt for instructions.
+#
+# Translated by: Madis Listak madis@netbell.ee
+# Last update: 14.03.2003
+#
+# $Id: Estonian.txt,v 1.30 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: jaanuar
+February: veebruar
+March: märts
+April: aprill
+May_: mai
+June: juuni
+July: juuli
+August: august
+September: september
+October: oktoober
+November: november
+December: detsember
+Jan: jaan
+Feb: veeb
+Mar: märts
+Apr: apr
+May: mai
+Jun: juuni
+Jul: juuli
+Aug: aug
+Sep: sept
+Oct: okt
+Nov: nov
+Dec: dets
+Sunday: pühapäev
+Monday: esmaspäev
+Tuesday: teisipäev
+Wednesday: kolmapäev
+Thursday: neljapäev
+Friday: reede
+Saturday: laupäev
+Sun: P
+Mon: E
+Tue: T
+Wed: K
+Thu: N
+Fri: R
+Sat: L
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Andmebaasi viga
+Search: Otsi
+matches found: vasteid leitud

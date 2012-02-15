@@ -1,0 +1,51 @@
+# See translations/English-US.txt for instructions.
+#
+# Translations anonymous, November 2003,
+# 'borrowed' from SourceForge project 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Afrikaans.txt,v 1.10 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Januarie
+February: Februarie
+March: Maart
+April: =
+May_: Mei
+June: Junie
+July: Julie
+August: Augustus
+September: =
+October: Oktober
+November: =
+December: Desember
+Jan: =
+Feb: =
+Mar: Maa
+Apr: =
+May: Mei
+Jun: =
+Jul: =
+Aug: =
+Sep: =
+Oct: Okt
+Nov: =
+Dec: Des
+Sunday: Sondag
+Monday: Maandag
+Tuesday: Dinsdag
+Wednesday: Woensdag
+Thursday: Donderdag
+Friday: Vrydag
+Saturday: Saterdag
+Sun: Son
+Mon: Maa
+Tue: Din
+Wed: Woe
+Thu: Don
+Fri: Vry
+Sat: =
+__month__ __dd__, __yyyy__: =

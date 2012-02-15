@@ -181,15 +181,4 @@ function store_file ( $filename, $mime, $mod_date, $text )
   }
 }
 
-
-/**
-  * No-op function required by dbi4php.php (which was copied from the
-  * WebCalendar project.)  Eventually, this may be replaced with the
-  * translate code from WebCalendar to support multiple languages.
-  */
-function translate ( $str ) {
-  return $str;
-}
-
-
 ?>

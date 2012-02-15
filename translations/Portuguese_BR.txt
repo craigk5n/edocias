@@ -1,0 +1,103 @@
+# See translations/English-US.txt for instructions.
+#
+# Brazilian Portuguese Translation
+# Revision 1.0
+# Translated by: Mauricio Piza - mpiza@formare.com.br
+#
+# Based in Portuguese version, by Paulino Michelazzo - paulino@michelazzo.com.br
+# Based in Portuguese version, by José Roberto Kerne - joseroberto@dicaslinux.com.br
+# Based in Portuguese version, by Sérgio Oliveira - sloliv@terra.com.br
+# Based in Portuguese version, by Nuno Lopes - nml@maxitel.pt
+# Based in Portuguese version, by Andre Oliveira - zack22@ig.com.br
+#
+# Last update: 23 June 2005
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Portuguese_BR.txt,v 1.48 2008/12/28 16:22:34 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Janeiro
+February: Fevereiro
+March: Março
+April: Abril
+May_: Maio
+June: Junho
+July: Julho
+August: Agosto
+September: Setembro
+October: Outubro
+November: Novembro
+December: Dezembro
+Jan: =
+Feb: Fev
+Mar: =
+Apr: Abr
+May: Mai
+Jun: =
+Jul: =
+Aug: Ago
+Sep: Set
+Oct: Out
+Nov: =
+Dec: Dez
+Sunday: Domingo
+Monday: Segunda
+Tuesday: Terça
+Wednesday: Quarta
+Thursday: Quinta
+Friday: Sexta
+Saturday: Sábado
+Sun: Dom
+Mon: Seg
+Tue: Ter
+Wed: Qua
+Thu: Qui
+Fri: Sex
+Sat: Sáb
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Erro no banco de dados
+Search: Pesquisar
+matches found: Ocorrências encontradas
+
+########################################
+# Page: translate.php
+#
+English: Inglês
+Basque: Basco
+Bulgarian: Búlgaro
+Catalan: Catalão
+Chinese (Simplified/GB2312): Chinês (Simplificado/GB2312)
+Chinese (Traditional/Big5): Chinês (Tradicional/Big5)
+Czech: Checo
+Danish: Dinamrquês
+Dutch: Holandês
+Estonian: Estoniano
+Finnish: Finlandês
+French: Francês
+Galician: Galego
+German: Alemão
+Holo (Taiwanese): Holo (Taiwanês)
+Hungarian: Húngaro
+Icelandic: Islandês
+Italian: Italiano
+Japanese: Japonês
+Korean: Coreano
+Norwegian: Norueguês
+Polish: Polonês
+Portuguese: Português
+Portuguese/Brazil: Português/Brasil
+Romanian: Romeno
+Russian: Russo
+Spanish: Espanhol
+Swedish: Sueco
+Turkish: Turco

@@ -13,6 +13,27 @@ include_once "config.php";
 include_once "dbi4php.php";
 // Common functions
 include_once "functions.php";
+// Functions for translating into different languages
+include_once "translate.php";
+
+// Allow 'lang' to be reset with URL parameter.
+// Example: index.phpq=searchterm&lang=de
+$langParam = '';
+if ( ! empty ( $language ) ) {
+  if ( empty ( $browser_languages[$language] ) ) {
+    echo "Error: '" . $language . "' is not a valid language abbreviation\n";
+    exit;
+  }
+  reset_language ( $browser_languages[$language] );
+} else {
+  $newLang = getGetValue ( 'lang' );
+  if ( ! empty ( $newLang ) ) {
+    if ( ! empty ( $browser_languages[$newLang] ) ) {
+      reset_language ( $browser_languages[$newLang] );
+    }
+    $langParam = '&amp;lang=' . $newLang;
+  }
+}
 
 ?>
 <html>
@@ -66,20 +87,23 @@ connect_db ();
 // Count how many documents
 $res = dbi_execute ( 'SELECT COUNT(*) FROM edm_doc' );
 if ( ! $res ) {
-  echo "Database error: " . dbi_error ();
+  echo translate("Database error") . ": " . dbi_error ();
   exit;
 }
 $row = dbi_fetch_row ( $res );
 $numDocs = $row[0];
 dbi_free_result ( $res );
 
+$numDocsStr = preg_replace ( '/XXX/', $numDocs, 
+  translate ( 'There are currently XXX documents.' ) );
+
+echo '<p>' . $numDocsStr . '</p>' . "\n";
 ?>
 
-<p>There are currently <b><?php echo $numDocs;?></b> documents.</p>
 
 <form action="index.php" method="get">
 <input type="text" size="40" name="q" value="<?php echo htmlentities ( stripslashes ( $q ) );?>"/>
-<input type="submit" value="Search" />
+<input type="submit" value="<?php etranslate("Search");?>" />
 
 </form>
 
@@ -131,7 +155,8 @@ if ( ! empty ( $q ) ) {
     // rather than a local file.
     $thisMatch = '';
     if ( preg_match ( '/http:\/\//', $filepath ) ) {
-      $thisMatch .= '<dt>' . $icon_url . '<a href="' . $filepath . '">' .
+      $thisMatch .= '<dt>' . $icon_url . '<a href="' .
+        $filepath . $langParam . '">' .
         ( empty ( $title ) ? htmlentities ( $filepath ) :
         htmlentities ( $title ) ) .
         '</a></dt><dd>';
@@ -154,20 +179,22 @@ if ( ! empty ( $q ) ) {
     if ( $last >= count ( $outArray ) - 1 )
       $last = count ( $outArray ) - 1;
     $numPages = ceil ( count ( $outArray ) / $matchesPerPage );
-    $nav = "<div class=\"pagination\"><p>Page ";
+    $nav = "<div class=\"pagination\"><p>" . translate('Page') . " ";
     for ( $i = 1; $i <= $numPages; $i++ ) {
       $nav .= " ";
       if ( $i == $p ) {
         $nav .= "<b class=\"page\">$i</b>";
       } else {
         $nav .= '<a class="page" href="index.php?q=' . htmlentities ( $q ) .
-          '&amp;p=' . $i . '">' . $i . '</a>';
+          '&amp;p=' . $i . $langParam . '">' . $i . '</a>';
       }
     }
     $nav .= "</p>\n</div>";
     $out = $nav;
-    $out .= "<p>Showing results " . ( $start + 1 ) . ' to ' .
-      ( $last + 1 ) . "</p>\n";
+    $t = translate ( 'Showing matches XXXSTARTXXX to XXXENDXXX' );
+    $t = preg_replace ( '/XXXSTARTXXX/', ( $start + 1 ), $t );
+    $t = preg_replace ( '/XXXENDXXX/', ( $last + 1 ), $t );
+    $out .= "<p>" . $t . "</p>\n";
     $out .= "<dl>\n";
     for ( $i = $start; $i < count ( $outArray ) && $i <= $last; $i++ ) {
       $out .= $outArray[$i];
@@ -181,7 +208,7 @@ if ( ! empty ( $q ) ) {
     }
     $out .= "</dl>\n";
   }
-  echo "$cnt matching documents found<br/>";
+  echo $cnt . ' ' . translate('matches found') . "<br/>";
   echo $out;
   dbi_free_result ( $res );
 }

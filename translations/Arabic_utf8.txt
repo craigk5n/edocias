@@ -1,0 +1,51 @@
+# See translations/English-US.txt for instructions.
+#
+# Translations by Karim Ratib, <Karim.Ratib@open-craft.com>, February 2005,
+# 'borrowed' from SourceForge project 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Arabic_utf8.txt,v 1.8 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: يناير
+February: فبراير
+March: مارس
+April: ابريل
+May_: مايو
+June: يونيو
+July: يوليو
+August: اغسطس
+September: سبتمبر
+October: اكتوبر
+November: نوفمبر
+December: ديسمبر
+Jan: يناير
+Feb: فبراير
+Mar: مارس
+Apr: ابريل
+May: مايو
+Jun: يونيو
+Jul: يوليو
+Aug: اغسطس
+Sep: سبتمبر
+Oct: اكتوبر
+Nov: نوفمبر
+Dec: ديسمبر
+Sunday: الأحد
+Monday: الإثنين
+Tuesday: الثلاثاء
+Wednesday: الأربعاء
+Thursday: الخميس
+Friday: الجمعة
+Saturday: السبت
+Sun: أحد
+Mon: إثنين
+Tue: ثلاثاء
+Wed: أربعاء
+Thu: خميس
+Fri: جمعة
+Sat: سبت
+__month__ __dd__, __yyyy__: =

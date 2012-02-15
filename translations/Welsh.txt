@@ -1,0 +1,55 @@
+# Translated by: Wyn James: wynjames@onetel.net.uk
+# Last update: 03 October 2002
+#
+# $Id: Welsh.txt,v 1.31 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: Ionawr
+February: Chwefror
+March: Mawrth
+April: Ebrill
+May_: Mai
+June: Mehefin
+July: Gorffennaf
+August: Awst
+September: Medi
+October: Hydref
+November: Tachwedd
+December: Rhagfyr
+Jan: Ionawr
+Feb: Chwefror
+Mar: Mawrth
+Apr: Ebrill
+May: Mai
+Jun: Mehefin
+Jul: Gorffennaf
+Aug: Awst
+Sep: Medi
+Oct: Hydref
+Nov: Tachwedd
+Dec: Rha
+Sunday: Sul
+Monday: Llun
+Tuesday: Mawrth
+Wednesday: Mercher
+Thursday: Iau
+Friday: Gwener
+Saturday: Sadwrn
+Sun: Sul
+Mon: Llu
+Tue: Maw
+Wed: Mer
+Thu: Iau
+Fri: Gwe
+Sat: Sad
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Database error: Gwall cronfa ddata
+Search: Chwiliad
+matches found: Darganfyddwyd atebion cyfatebol

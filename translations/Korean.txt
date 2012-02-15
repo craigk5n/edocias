@@ -1,0 +1,60 @@
+# See translations/English-US.txt for instructions.
+#
+# Author: Joonyup Jeon <goodwill@wowbook.com>
+# Last updated: 07 June 2000
+#
+# Additional translations 'borrowed' from SourceForge project
+# 'The Coolest DHTML Calendar',
+# http://sourceforge.net/projects/jscalendar/
+#
+# $Id: Korean.txt,v 1.35 2008/10/15 18:19:59 bbannon Exp $
+# Translation last updated on 02-14-2012
+
+########################################
+# Page: functions.php
+#
+January: 1월
+February: 2월
+March: 3월
+April: 4월
+May_: 5월
+June: 6월
+July: 7월
+August: 8월
+September: 9월
+October: 10월
+November: 11월
+December: 12월
+Jan: 1월
+Feb: 2월
+Mar: 3월
+Apr: 4월
+May: 5월
+Jun: 6월
+Jul: 7월
+Aug: 8월
+Sep: 9월
+Oct: 10월
+Nov: 11월
+Dec: 12월
+Sunday: 일요일
+Monday: 월요일
+Tuesday: 화요일
+Wednesday: 수요일
+Thursday: 목요일
+Friday: 금요일
+Saturday: 토요일
+Sun: 일
+Mon: 월
+Tue: 화
+Wed: 수
+Thu: 목
+Fri: 금
+Sat: 토
+__month__ __dd__, __yyyy__: =
+
+########################################
+# Page: index.php
+#
+Search: 검색
+matches found: 항목 발견

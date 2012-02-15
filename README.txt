@@ -37,6 +37,7 @@ Installation:
 1) Copy config.php.example to config.php. Use your favorite text editor to
    customize config.php.  You must set define which document directories to
    include.  You must also configure how to handle all the various file types.
+   There are some other configuration options in there, too.
 2) Install and configure the various document conversion tools needed to
    extract plain text from the various file types.  See the list of possible
    tools to use for this below.  There are some tools in the included
