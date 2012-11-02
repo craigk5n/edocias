@@ -38,6 +38,8 @@ if ( ! $c ) {
 
 $total = $ignored = $prior = $processed = $unknown = 0;
 
+$existingFiles = array ();
+
 foreach ( $dirs as $dir ) {
   if ( empty ( $skipDirs[$dir] ) ) {
     $ite=new RecursiveDirectoryIterator ( $dir );
@@ -70,7 +72,8 @@ foreach ( $dirs as $dir ) {
             $processed++;
             $didThis = true;
             echo "File: $filename\n";
-            $cmd = str_replace ( '%FILE%', $cur, $command );
+            $escCur = str_replace ( '"', '\\"', $cur );
+            $cmd = str_replace ( '%FILE%', $escCur, $command );
             echo "COMMAND: $cmd\n";
             exec ( $cmd );
             $out = "$tempDir/$outFile";
@@ -92,15 +95,33 @@ foreach ( $dirs as $dir ) {
         }
         if ( ! $didThis ) $unknown++;
       }
+      $existingFiles[$filename] = 1;
     }
   }
 }
+
+// Examine database for files that may have been deleted or renamed.
+$res = dbi_execute (
+  'SELECT filepath, docid FROM edm_doc WHERE filepath LIKE "/%"' );
+$deleted = 0;
+while ( $row = dbi_fetch_row ( $res ) ) {
+  $filepath = $row[0];
+  $docid = $row[1];
+  if ( empty ( $existingFiles[$filepath] ) && ! file_exists ( $filepath ) ) {
+    echo "Deleted file found: $filepath\n";
+    dbi_execute ( 'DELETE FROM edm_doc WHERE filepath = ?',
+      array ( $filepath ) );
+    $deleted++;
+  }
+}
+dbi_free_result ( $res );
 
 echo "Total files: $total\n";
 echo "Previously processed: $prior\n";
 echo "Processed now: $processed\n";
 echo "Unknown file types: $unknown\n";
 echo "Ignored: $ignored\n";
+echo "Deleted: $deleted\n";
 
 dbi_close ( $c );
 

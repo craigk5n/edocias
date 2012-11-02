@@ -1,3 +1,9 @@
+Version 1.2 (?? ??? ????)
+- Include date in search results.  If filename includes a string of
+  the format 20101231 (example: "20120315 Results.pdf") that date will
+  be used instead of the date processed.
+- Removed files (or renamed files) will be handled now.  Prior to this,
+  deleting a file would still leave its entry in the database.
 Version 1.1 (13 Feb 2012)
 - Added pagination support.  Configure $maxMatchesBeforePagination and
   $matchesPerPage in config.php.
