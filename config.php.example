@@ -54,6 +54,12 @@ $db_persistent = '0';
 // Should db errors be shown to the user?  (Good for development, terrible
 // idea for production.)
 $phpdbiVerbose = false;
+// The following required to avoid PHP errors.
+// Set to your timezone
+date_default_timezone_set ( 'America/New_York' );
+// Format for dates.  See functions.php date_to_str for format options.
+$date_format = '__yyyy__-__mon__-__dd__';
+
 
 // Location of various tools for converting binary files to plain text
 // %FILE% will be replaced with the full path to the binary file.

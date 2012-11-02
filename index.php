@@ -48,6 +48,9 @@ if ( file_exists ( 'style.css' ) ) {
 ?>
 <style type="text/css">
 dt a {
+  font-weight: normal;
+}
+dt {
   font-size: 80%;
   font-weight: normal;
 }
@@ -108,6 +111,12 @@ echo '<p>' . $numDocsStr . '</p>' . "\n";
 </form>
 
 <?php
+
+$sql = '';
+$sql_params = array ();
+$words = array ();
+$mostRecent = false;
+
 // If we are already searching... perform the search now.
 if ( ! empty ( $q ) ) {
   $klen = strlen ( $q );
@@ -137,6 +146,14 @@ if ( ! empty ( $q ) ) {
 
   $sql .= ' ORDER by date DESC';
   //echo "SQL: $sql<br>Params:<br/>"; print_r ( $sql_params ); echo "<br/>";
+}
+if ( empty ( $sql ) && $showMostRecent && $showMostRecentCount > 0 ) {
+  $sql = 'SELECT docid, doctitle, filepath, date, mime, ocr FROM edm_doc ' .
+    'ORDER BY process_date DESC LIMIT ' . $showMostRecentCount;
+  $mostRecent = true;
+}
+
+if ( ! empty ( $sql ) ) {
   $res = dbi_execute ( $sql, $sql_params );
   $cnt = 0;
   $outArray = array ();
@@ -151,6 +168,13 @@ if ( ! empty ( $q ) ) {
     $icon = mime_to_icon ( $mime );
     $icon_url = empty ( $icon ) ?
       '&nbsp;&nbsp;' : '<img src="' . $icon . '" /> ';
+    $fmt_date = date_to_str ( date ( 'Ymd', $date ),
+      $date_format, false, true );
+    if ( preg_match ( '/([12][90]\d\d[01]\d[0-3]\d)/', $filepath, $match ) ) {
+      // found a date in the filepath
+      $file_date = $match[1];
+      $fmt_date = date_to_str ( $file_date, $date_format, false, true );
+    }
     // If the filepath starts with 'http://', then this is a remote URL
     // rather than a local file.
     $thisMatch = '';
@@ -159,12 +183,14 @@ if ( ! empty ( $q ) ) {
         $filepath . $langParam . '">' .
         ( empty ( $title ) ? htmlentities ( $filepath ) :
         htmlentities ( $title ) ) .
-        '</a></dt><dd>';
+        '</a> -- ' . $fmt_date . '</dt><dd>';
     } else {
-      $thisMatch .= '<dt>' . $icon_url . '<a href="docview.php?id=' . $docid . '">' .
+      $thisMatch .= '<dt>' . $icon_url . '<a href="docview.php/' .
+        urlencode ( basename ( $filepath ) ) . '?id=' .
+        $docid . '">' .
         htmlentities ( trim_filename ( $filepath ) ) .
-        '</a></dt><dd>';
-   }
+        '</a> -- ' . $fmt_date . '</dt><dd>';
+    }
     $thisMatch .= show_matching_text ( $words, $ocr );
     $thisMatch .= '</dd>' . "\n";
     $outArray[] = $thisMatch;
@@ -208,7 +234,10 @@ if ( ! empty ( $q ) ) {
     }
     $out .= "</dl>\n";
   }
-  echo $cnt . ' ' . translate('matches found') . "<br/>";
+  if ( $mostRecent )
+    echo $cnt . ' ' . translate('most recent documents') . "<br/>";
+  else
+    echo $cnt . ' ' . translate('matches found') . "<br/>";
   echo $out;
   dbi_free_result ( $res );
 }
