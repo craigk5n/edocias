@@ -16,6 +16,10 @@ include_once "functions.php";
 // Functions for translating into different languages
 include_once "translate.php";
 
+$simple = getValue ( 'simple' );
+$simple = ! empty ( $simple );
+$target = getValue ( 'target' );
+
 // Allow 'lang' to be reset with URL parameter.
 // Example: index.php?q=searchterm&lang=de
 $langParam = '';
@@ -42,8 +46,13 @@ if ( ! empty ( $language ) ) {
 <?php
 // Allow customization of the appearance with a custom CSS file.
 // We will include a style.css if we find one.
-if ( file_exists ( 'style.css' ) ) {
+$style = getValue ( 'style' );
+if ( file_exists ( 'style.css' ) && ! $simple && empty ( $style ) ) {
   include_once "style.css";
+} else if ( ! empty ( $style ) ) {
+  if ( file_exists ( $style ) ) {
+    include_once $style;
+  }
 }
 ?>
 <style type="text/css">
@@ -76,13 +85,14 @@ div.pagination a.page, b.page {
 
 // Allow customization of the appearance with a custom header file.
 // We will include either 'header.html' or 'header.php';
-if ( file_exists ( 'header.php' ) ) {
+if ( file_exists ( 'header.php' ) && ! $simple ) {
   include_once ( 'header.php' );
 } else if ( file_exists ( 'header.html' ) ) {
   echo file_get_contents ( 'header.html' );
 }
 
 $q = getGetValue ( 'q' );
+$filter = getGetValue ( 'f' );
 
 // Open database connection
 connect_db ();
@@ -104,8 +114,28 @@ echo '<p>' . $numDocsStr . '</p>' . "\n";
 ?>
 
 
-<form action="index.php" method="get">
+<form action="index.php" method="get"
+<?php
+  if ( ! empty ( $target ) ) {
+    echo "target=\"" . htmlentities ( $target ) . "\"";
+}
+?>>
 <input type="text" size="40" name="q" value="<?php echo htmlentities ( stripslashes ( $q ) );?>"/>
+<?php
+$filterPath = '';
+if ( ! $simple && is_array ( $searchFilters ) && count ( $searchFilters ) > 0 ) {
+  echo '<select name="f" id="f"><option value="">All Documents</option>';
+  for ( $i = 0; $i < count ( $searchFilters ); $i++ ) { 
+    $f = $searchFilters[$i];
+    $selected = ( ! empty ( $filter ) && $filter == $f['id'] );
+    if ( $selected )
+      $filterPath = $f['path'];
+    echo '<option value="' . $f['id'] . '"' . ( $selected ? ' SELECTED="SELECTED"' : '' ) .
+       '>' . htmlentities ( $f['name'] ) . "</option>\n";
+  }
+  echo "</select>";
+}
+?>
 <input type="submit" value="<?php etranslate("Search");?>" />
 
 </form>
@@ -144,12 +174,17 @@ if ( ! empty ( $q ) ) {
     $sql_params[] = '%' . $words[$i] . '%';
   }
 
+  if ( ! empty ( $filterPath ) ) {
+    $sql .= ' AND filepath LIKE(?)';
+    $sql_params[] = '%' . $filterPath . '%';
+  }
+
   $sql .= ' ORDER by date DESC';
   //echo "SQL: $sql<br>Params:<br/>"; print_r ( $sql_params ); echo "<br/>";
 }
 if ( empty ( $sql ) && $showMostRecent && $showMostRecentCount > 0 ) {
   $sql = 'SELECT docid, doctitle, filepath, date, mime, ocr FROM edm_doc ' .
-    'ORDER BY process_date DESC LIMIT ' . $showMostRecentCount;
+    'ORDER BY process_date DESC, filepath LIMIT ' . $showMostRecentCount;
   $mostRecent = true;
 }
 
@@ -169,7 +204,7 @@ if ( ! empty ( $sql ) ) {
     $icon_url = empty ( $icon ) ?
       '&nbsp;&nbsp;' : '<img src="' . $icon . '" /> ';
     $fmt_date = date_to_str ( date ( 'Ymd', $date ),
-      $date_format, false, true );
+      $date_format, true, true );
     if ( preg_match ( '/([12][90]\d\d[01]\d[0-3]\d)/', $filepath, $match ) ) {
       // found a date in the filepath
       $file_date = $match[1];
@@ -180,14 +215,18 @@ if ( ! empty ( $sql ) ) {
     $thisMatch = '';
     if ( preg_match ( '/http:\/\//', $filepath ) ) {
       $thisMatch .= '<dt>' . $icon_url . '<a href="' .
-        $filepath . $langParam . '">' .
+        $filepath . $langParam . '"' .
+        ( empty ( $target ) ? '' : " target=\"" .
+        urlencode ( $target ) . "\"" ) . '>' .
         ( empty ( $title ) ? htmlentities ( $filepath ) :
         htmlentities ( $title ) ) .
         '</a> -- ' . $fmt_date . '</dt><dd>';
     } else {
       $thisMatch .= '<dt>' . $icon_url . '<a href="docview.php/' .
         urlencode ( basename ( $filepath ) ) . '?id=' .
-        $docid . '">' .
+        $docid . '"' .
+        ( empty ( $target ) ? '' : " target=\"" .
+        urlencode ( $target ) . "\"" ) . '">' .
         htmlentities ( trim_filename ( $filepath ) ) .
         '</a> -- ' . $fmt_date . '</dt><dd>';
     }
@@ -249,7 +288,11 @@ function mime_to_icon ( $mime )
   for ( $i = 0; $i < count ( $fileSpecs ); $i++ ) {
     $fs = $fileSpecs[$i];
     if ( $fs['mime'] == $mime ) {
-      $icon = 'icons/' . $fs['type'] . '-icon.png';
+      if (!empty($fs['icon'])) {
+        $icon = 'icons/' . $fs['icon'];
+      } else {
+        $icon = 'icons/' . $fs['type'] . '-icon.png';
+      }
       if ( file_exists ( $icon ) )
         return $icon;
       return false; // no such icon
@@ -312,12 +355,12 @@ function show_matching_text ( $words, $ocr )
 
 dbi_close ( $c );
 
-// Allow customization of the appearance with a custom tailer file.
-// We will include either 'tailer.html' or 'tailer.php';
-if ( file_exists ( 'tailer.php' ) ) {
-  include_once ( 'tailer.php' );
-} else if ( file_exists ( 'tailer.html' ) ) {
-  echo file_get_contents ( 'tailer.html' );
+// Allow customization of the appearance with a custom trailer file.
+// We will include either 'trailer.html' or 'trailer.php';
+if ( file_exists ( 'trailer.php' ) && ! $simple ) {
+  include_once ( 'trailer.php' );
+} else if ( file_exists ( 'trailer.html' ) ) {
+  echo file_get_contents ( 'trailer.html' );
 }
 ?>
 

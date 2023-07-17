@@ -45,7 +45,7 @@ if ( empty ( $filepath ) || empty ( $length ) ) {
 // that the browser knows how to view the document.
 Header ( 'Content-Length: ' . filesize ( $filepath ) );
 Header ( 'Content-Type: ' . $mime );
-Header ( 'Content-Disposition: inline; filename=' . basename ( $filepath ) );
+//Header ( 'Content-Disposition: inline; filename=' . basename ( $filepath ) );
 
 $fh = fopen ( $filepath, 'r' );
 $data = fread ( $fh, filesize ( $filepath ) );

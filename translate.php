@@ -168,8 +168,11 @@ function load_translation_text() {
     if ( ! file_exists ( $lang_file ) )
       $lang_file = 'translations/' . $lang_cache;
   }
-  if ( ! file_exists ( $lang_file ) )
-    die_miserable_death ( 'Cannot find language file: ' . $lang_file );
+  if ( ! file_exists ( $lang_file ) ) {
+    //die_miserable_death ( 'Cannot find language file: ' . $lang_file );
+    // ignore this...
+    return;
+  }
 
   $can_save = false;
 
