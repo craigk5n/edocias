@@ -1,0 +1,7 @@
+config.php
+.htaccess
+.DS_Store
+*.sha
+vendor
+*.orig
+*.save

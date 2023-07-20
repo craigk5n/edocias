@@ -38,7 +38,10 @@ manuals and various other documents to go paperless.
 2) Install and configure the various document conversion tools needed to
    extract plain text from the various file types.  See the list of possible
    tools to use for this below.  There are some tools in the included
-   tools.zip file.
+   tools.  In particular, consider using the scan-pdf.sh script.  If you
+   scan a multipage document to create a PDF, the bash script will extract
+   the images for each page and OCR them using tesseract.  (Using pdftotext
+   on such a PDF will not work.)
 3) Create the MySQL database using the SQL found in tables-mysql.sql.
    Other database types should work (Oracle, PostgreSQL, etc.) but have not
    been tested (and you may have to change the 'CREATE TABLE' syntax).
@@ -48,7 +51,8 @@ manuals and various other documents to go paperless.
    It is recommended you setup a cron job to run this once a day to
    automatically pick up new files.
 5) Optionally customize the appearance to match the rest of your site.
-   The UI was intentionally left bare to avoid conflicts with your website.
+   The UI was intentionally left somewhat bare to avoid conflicts with your website.
+   It does make use of Bootstrap and jquery.
    The main page (index.php) will look for the following files.  If found,
    they will be included.
    - style.css: a custom style sheet
@@ -65,29 +69,25 @@ manuals and various other documents to go paperless.
 
 ## Extraction tools
 
-I have personally used the tools below (on Mac OS X 10.7).
+I have personally used the tools below (on Ubuntu 20.04)
 
 - png, tif, jpeg, gif via OCR:
   Tool: Tesseract  
-  URL: http://code.google.com/p/tesseract-ocr/  
-  Note: Tesseract required some hacking to get it installed on OS X,
-  so google it.
+  URL: https://github.com/tesseract-ocr/tesseract  
+  Installation: sudo apt install tesseract-ocr
 - pdf:  
-  Tool: pdftotext (part of XPDF)  
-  URL: http://www.foolabs.com/xpdf/
+  Tool: pdftotext (part of poppler-utils)  
+  Installation: sudo apt-get install poppler-utils
 - doc (MS Word):  
   Tool: antiword  
-  URL: http://www.winfield.demon.nl/
+  Install: sudo apt install antiword
 - xls (MS Excel):   
-  Tool: xls2txt.pl (included in tools.zip)  
+  Tool: xls2txt.pl (included in tools)  
   Notes: This perl script requires a few modules available from cpan.org.
     You'll get an error indicating the missing modules if you don't have them.
 - html:  
-  Tool: html2txt.php (included in tools.zip)  
-  Notes: Small custom script that uses open source phphtmlparser tool  
-  URL: http://php-html.sourceforge.net/html2text.php
+  Tool: html2text  
+  Installation: sudo apt-get install html2text
 
-
-The tools below look like a good fit also, but I have not tried them.
 
 

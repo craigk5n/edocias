@@ -1,0 +1,21 @@
+{
+    "name": "k5n/edocias",
+    "type": "project",
+    "description": "Document index and search app",
+    "version": "v1.2.0",
+    "homepage": "https://www.k5n.us/edocias/",
+    "authors": [
+        {
+            "name": "Craig Knudsen",
+            "email": "craig@k5n.us",
+            "homepage": "https://www.k5n.us",
+            "role": "Project Maintainer / Developer"
+        }
+    ],
+    "require": {
+        "components/jquery": "3.5.*",
+        "twbs/bootstrap": "4.6.2",
+        "twbs/bootstrap-icons": "1.8.3"
+    },
+    "license": "GPL-2.0-only"
+}

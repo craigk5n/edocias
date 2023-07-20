@@ -15,6 +15,8 @@ include_once "dbi4php.php";
 include_once "functions.php";
 // Functions for translating into different languages
 include_once "translate.php";
+// Load bootstrap & jquery (managed by composer)
+include_once "load_assets.php";
 
 $simple = getValue ( 'simple' );
 $simple = ! empty ( $simple );
@@ -54,32 +56,12 @@ if ( file_exists ( 'style.css' ) && ! $simple && empty ( $style ) ) {
     include_once $style;
   }
 }
+// Include Bootstrap and jqyuery
+echo $ASSETS;
 ?>
-<style type="text/css">
-dt a {
-  font-weight: normal;
-}
-dt {
-  font-size: 80%;
-  font-weight: normal;
-}
-div.textmatch {
-  font-size: 70%;
-}
-div.pagination {
-  font-size: 80%;
-}
-div.pagination a, b{
-}
-div.pagination a.page, b.page {
-  border: 1px solid #c0c0c0;
-  background-color: #e0e0e0;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-</style>
 </head>
 <body>
+<div class="container-fluid"> 
 
 <?php
 
@@ -90,6 +72,12 @@ if ( file_exists ( 'header.php' ) && ! $simple ) {
 } else if ( file_exists ( 'header.html' ) ) {
   echo file_get_contents ( 'header.html' );
 }
+
+?>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+<?php
 
 $q = getGetValue ( 'q' );
 $filter = getGetValue ( 'f' );
@@ -114,17 +102,19 @@ echo '<p>' . $numDocsStr . '</p>' . "\n";
 ?>
 
 
-<form action="index.php" method="get"
+<form class="form-inline" action="index.php" method="get"
 <?php
   if ( ! empty ( $target ) ) {
     echo "target=\"" . htmlentities ( $target ) . "\"";
 }
 ?>>
-<input type="text" size="40" name="q" value="<?php echo htmlentities ( stripslashes ( $q ) );?>"/>
+<div class="form-group mr-2">
+
+<input type="text" class="form-control" size="40" name="q" value="<?php echo htmlentities ( stripslashes ( $q ) );?>"/>
 <?php
 $filterPath = '';
 if ( ! $simple && is_array ( $searchFilters ) && count ( $searchFilters ) > 0 ) {
-  echo '<select name="f" id="f"><option value="">All Documents</option>';
+  echo '<select class="form-control" name="f" id="f"><option value="">All Documents</option>';
   for ( $i = 0; $i < count ( $searchFilters ); $i++ ) { 
     $f = $searchFilters[$i];
     $selected = ( ! empty ( $filter ) && $filter == $f['id'] );
@@ -136,9 +126,10 @@ if ( ! $simple && is_array ( $searchFilters ) && count ( $searchFilters ) > 0 ) 
   echo "</select>";
 }
 ?>
-<input type="submit" value="<?php etranslate("Search");?>" />
+<input class="btn btn-primary" type="submit" value="<?php etranslate("Search");?>" />
 
 </form>
+</div>
 
 <?php
 
@@ -201,6 +192,7 @@ if ( ! empty ( $sql ) ) {
     $mime = $row[4];
     $ocr = $row[5];
     $icon = mime_to_icon ( $mime );
+    echo "<!-- icon for $mime is $icon -->\n";
     $icon_url = empty ( $icon ) ?
       '&nbsp;&nbsp;' : '<img src="' . $icon . '" /> ';
     $fmt_date = date_to_str ( date ( 'Ymd', $date ),
@@ -228,10 +220,10 @@ if ( ! empty ( $sql ) ) {
         ( empty ( $target ) ? '' : " target=\"" .
         urlencode ( $target ) . "\"" ) . '">' .
         htmlentities ( trim_filename ( $filepath ) ) .
-        '</a> -- ' . $fmt_date . '</dt><dd>';
+        '</a> -- ' . $fmt_date . '</dt><dd><small>';
     }
     $thisMatch .= show_matching_text ( $words, $ocr );
-    $thisMatch .= '</dd>' . "\n";
+    $thisMatch .= '</small></dd>' . "\n";
     $outArray[] = $thisMatch;
   }
   if ( count ( $outArray ) > $maxMatchesBeforePagination ) {
@@ -291,7 +283,7 @@ function mime_to_icon ( $mime )
       if (!empty($fs['icon'])) {
         $icon = 'icons/' . $fs['icon'];
       } else {
-        $icon = 'icons/' . $fs['type'] . '-icon.png';
+        $icon = 'icons/' . $fs['type'] . '.svg';
       }
       if ( file_exists ( $icon ) )
         return $icon;
@@ -299,7 +291,7 @@ function mime_to_icon ( $mime )
     }
   }
 
-  $icon = 'icons/' . $mime . '-icon.png';
+  $icon = 'icons/filetype-' . $mime . '.svg';
   if ( file_exists ( $icon ) )
     return $icon;
 
@@ -364,5 +356,9 @@ if ( file_exists ( 'trailer.php' ) && ! $simple ) {
 }
 ?>
 
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
