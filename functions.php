@@ -33,9 +33,6 @@ function connect_db ()
 /**
  * Gets the value resulting from an HTTP POST method.
  * 
- * <b>Note:</b> The return value will be affected by the value of
- * <var>magic_quotes_gpc</var> in the php.ini file.
- * 
  * @param string $name Name used in the HTML form
  *
  * @return string The value used in the HTML form
@@ -58,9 +55,6 @@ function getPostValue ( $name ) {
 
 /**
  * Gets the value resulting from an HTTP GET method.
- *
- * <b>Note:</b> The return value will be affected by the value of
- * <var>magic_quotes_gpc</var> in the php.ini file.
  *
  * If you need to enforce a specific input format (such as numeric input), then
  * use the {@link getValue()} function.
@@ -88,9 +82,6 @@ function getGetValue ( $name ) {
 /**
  * Gets the value resulting from either HTTP GET method or HTTP POST method.
  *
- * <b>Note:</b> The return value will be affected by the value of
- * <var>magic_quotes_gpc</var> in the php.ini file.
- *
  * <b>Note:</b> If you need to get an integer value, yuou can use the
  * getIntValue function.
  *
@@ -114,10 +105,6 @@ function getValue ( $name, $format="", $fatal=false ) {
   $val = getPostValue ( $name );
   if ( ! isset ( $val ) )
     $val = getGetValue ( $name );
-  // for older PHP versions...
-  if ( ! isset ( $val  ) && get_magic_quotes_gpc () == 1 &&
-    ! empty ( $GLOBALS[$name] ) )
-    $val = $GLOBALS[$name];
   if ( ! isset ( $val  ) )
     return "";
   if ( ! empty ( $format ) && ! preg_match ( "/^" . $format . "$/", $val ) ) {
@@ -133,9 +120,6 @@ function getValue ( $name, $format="", $fatal=false ) {
 
 /**
  * Gets an integer value resulting from an HTTP GET or HTTP POST method.
- *
- * <b>Note:</b> The return value will be affected by the value of
- * <var>magic_quotes_gpc</var> in the php.ini file.
  *
  * @param string $name  Name used in the HTML form or found in the URL
  * @param bool   $fatal Is it considered a fatal error requiring execution to
